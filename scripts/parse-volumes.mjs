@@ -139,6 +139,34 @@ function extractOpeningHook(blockText) {
   return "";
 }
 
+const KNOWN_HEADINGS = [
+  "canonical website story",
+  "why this changed history",
+  "why this story matters",
+  "why this matters",
+  "the reelspiration",
+  "the principle",
+  "your next step",
+  "the decision",
+  "60-second reel voiceover",
+  "seven-slide carousel",
+  "linkedin / business audience version",
+  "linkedin",
+  "visual storyboard direction",
+  "visual storyboard",
+  "studio direction",
+  "editorial guardrails",
+  "starting source set",
+  "starting source list",
+  "production approval checklist",
+  "opening hook",
+];
+
+function isKnownHeadingLine(raw) {
+  const cleaned = stripMd(raw).toLowerCase();
+  return KNOWN_HEADINGS.some((h) => cleaned === h);
+}
+
 function extractSection(blockText, headingPatterns) {
   const lines = blockText.split("\n");
   let start = -1;
@@ -154,7 +182,7 @@ function extractSection(blockText, headingPatterns) {
   let end = lines.length;
   for (let i = start; i < lines.length; i++) {
     const raw = lines[i];
-    const isHeading = /^#{1,3}\s/.test(raw) || /^\*\*[A-Z][A-Z\s]+\*\*\s*$/.test(raw.trim());
+    const isHeading = isKnownHeadingLine(raw);
     if (isHeading) {
       end = i;
       break;
@@ -182,7 +210,7 @@ function extractRaw(blockText, headingPatterns) {
   if (start === -1) return "";
   let end = lines.length;
   for (let i = start; i < lines.length; i++) {
-    if (/^#{1,3}\s/.test(lines[i])) {
+    if (isKnownHeadingLine(lines[i])) {
       end = i;
       break;
     }
