@@ -51,6 +51,20 @@ I built them now because they're the connective tissue between "we have
    text/creative-brief layer of your content engine — it does not render
    video (nothing can, from text alone; see "Not built yet").
 
+3. **`scripts/export-social-batch.ts`** — the same logic, run against
+   every published story at once instead of one at a time, so a
+   production day starts with a full batch instead of running the
+   single-story command repeatedly:
+   ```
+   npm run export:social:batch
+   npm run export:social:batch -- --collection greatest-comebacks
+   npm run export:social:batch -- --challenge need-courage
+   npm run export:social:batch -- --slugs kobe-bryant,apollo-13
+   ```
+   Output lands in `exports/<YYYY-MM-DD>/`, one folder per story plus an
+   `INDEX.md` summarizing pacing flags and authored-vs-generated content
+   — the thing to skim before opening any individual package.
+
 ## Design direction
 
 Deliberately not the generic AI-website look (cream background, serif

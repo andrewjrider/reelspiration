@@ -72,15 +72,16 @@ look — Serena Williams landed in "starting-over," for instance, which is
 defensible but not the only reasonable read. Spot-check before treating
 these as final.
 
-**4. Several authored Reel scripts run well over the 60-second target.**
-The `export:social` pipeline's word-count check (added specifically to
-catch this) flagged that some of your manuscripts' "60-Second Reel
-Voiceover" sections run 400+ words — closer to 3 minutes at a measured
-pace than 60 seconds. Kobe Bryant's authored script is one example (426
-words, ~187s). This isn't a parsing error; it's the actual authored text
-running long. Worth a trim pass across the manuscripts before these go to
-voice production, or a decision to treat the authored scripts as
-"extended cut" source material and write tighter 60s versions separately.
+**4. Two authored Reel scripts run slightly over the 60-second target —
+correcting an earlier version of this note.** This report originally
+flagged widespread pacing problems (scripts running 400+ words) based on
+a check done before the parser bugfix — that finding was itself a
+symptom of the same field-boundary bug (bled content inflating word
+counts), not a real property of your manuscripts. See BUGFIX_LOG.md.
+After the fix, a corpus-wide check across all 110 stories shows only 2
+genuinely over the 60s target: Doolittle Raid (63s) and Apollo 13 (62s).
+Trivial trims, not a pattern. `npm run export:social:batch` flags these
+automatically in its summary index going forward.
 
 ## What got carried over per story (when present in the source)
 
