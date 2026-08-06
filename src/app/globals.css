@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+/*
+  DESIGN TOKENS — Reelspiration
+  Direction: documentary archive / proof, not a motivational-quote feed.
+  Deep ink background, warm paper foreground, brass as the single "verified /
+  proof" accent (like a medal or an archival stamp), rust and moss as
+  secondary tags for adversity vs. resolution states.
+*/
+
+:root {
+  --ink: #121915;         /* near-black green-black — the page background */
+  --ink-raised: #1b2420;  /* slightly lifted panels/cards */
+  --paper: #ece4d3;       /* warm bone paper — primary text on ink */
+  --paper-dim: #a79f8c;   /* secondary text on ink */
+  --brass: #b8863b;       /* proof / verified / signature accent */
+  --brass-bright: #d9a75a;
+  --rust: #8c4a34;        /* adversity tag */
+  --moss: #46614f;        /* resolution / turning point tag */
+  --line: #33403a;        /* hairline dividers on ink */
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-ink-raised: var(--ink-raised);
+  --color-paper: var(--paper);
+  --color-paper-dim: var(--paper-dim);
+  --color-brass: var(--brass);
+  --color-brass-bright: var(--brass-bright);
+  --color-rust: var(--rust);
+  --color-moss: var(--moss);
+  --color-line: var(--line);
+  --font-serif: "Newsreader", Georgia, serif;
+  --font-stamp: "Archivo", "Arial Narrow", sans-serif;
+}
+
+body {
+  background: var(--ink);
+  color: var(--paper);
+  font-family: "Newsreader", Georgia, serif;
+}
+
+.font-serif {
+  font-family: "Newsreader", Georgia, serif;
+}
+
+.font-stamp {
+  font-family: "Archivo", "Arial Narrow", sans-serif;
+  letter-spacing: 0.08em;
+}
+
+/* Reduced motion respected globally */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+::selection {
+  background: var(--brass);
+  color: var(--ink);
+}
