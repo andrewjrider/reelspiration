@@ -1,15 +1,15 @@
 import Image from "next/image";
 import { StoryRecord } from "@/data/types";
+import { getChallenge } from "@/data/challenges";
 
 interface PortraitFrameProps {
   story: StoryRecord;
   /**
    * Path to a real photo (e.g. "/portraits/kobe-bryant.jpg"), once one
-   * exists. Until then, renders the engraved-seal placeholder below —
-   * intentional art direction, not a missing-image box. Drop a real
-   * file in /public/portraits/ and pass its path here to swap it in;
-   * the duotone treatment, corner mark, and caption bar all apply
-   * automatically, no other changes needed.
+   * exists and its rights are cleared. Until then, renders the archival
+   * plate below — a composed typographic treatment, not a missing-image
+   * box. Drop a file in /public/portraits/ and pass its path here; the
+   * duotone treatment, corner mark, and caption all apply automatically.
    */
   imageSrc?: string;
   aspect?: "portrait" | "square";
@@ -23,7 +23,6 @@ export default function PortraitFrame({
   size = "lg",
 }: PortraitFrameProps) {
   const aspectClass = aspect === "portrait" ? "aspect-[4/5]" : "aspect-square";
-  const initial = story.subject.trim().charAt(0).toUpperCase();
   const captionPad = size === "sm" ? "p-3" : "p-4";
   const nameSize = size === "sm" ? "text-[10px]" : "text-[11px]";
   const dekSize = size === "sm" ? "text-[11px]" : "text-[12px]";
@@ -43,11 +42,9 @@ export default function PortraitFrame({
           }}
         />
       ) : (
-        <EngravedSeal initial={initial} uid={story.slug} />
+        <ArchivalPlate story={story} size={size} />
       )}
 
-      {/* Duotone ink wash — applies over real photos too, ties every
-          portrait to the same palette regardless of source image */}
       {imageSrc && (
         <div
           className="absolute inset-0"
@@ -59,85 +56,147 @@ export default function PortraitFrame({
         />
       )}
 
-      {/* Brass corner mark — the seal, per brand system */}
       <div className="absolute top-3 right-3 w-3 h-3 border border-brass rotate-45" />
 
-      {/* Caption bar */}
-      <div className={`absolute bottom-0 left-0 right-0 ${captionPad} bg-gradient-to-t from-ink via-ink/70 to-transparent`}>
-        <p className={`font-stamp ${nameSize} uppercase tracking-[0.1em] text-paper`}>
-          {story.subject}
-        </p>
-        <p className={`font-serif italic ${dekSize} text-paper-dim mt-0.5 line-clamp-1`}>
-          {story.dek}
-        </p>
-      </div>
+      {/* Caption bar only renders over real photos. The archival plate
+          already carries the name and dek as part of its composition —
+          repeating them underneath would read as a mistake. */}
+      {imageSrc && (
+        <div className={`absolute bottom-0 left-0 right-0 ${captionPad} bg-gradient-to-t from-ink via-ink/70 to-transparent`}>
+          <p className={`font-stamp ${nameSize} uppercase tracking-[0.1em] text-paper`}>
+            {story.subject}
+          </p>
+          <p className={`font-serif italic ${dekSize} text-paper-dim mt-0.5 line-clamp-1`}>
+            {story.dek}
+          </p>
+        </div>
+      )}
     </div>
   );
 }
 
-function EngravedSeal({ initial, uid }: { initial: string; uid: string }) {
-  const bgId = `sealBg-${uid}`;
-  const filterId = `grainSealFilter-${uid}`;
-  const patternId = `grainSeal-${uid}`;
+/**
+ * The no-photo treatment: a composed typographic plate built from
+ * metadata the story already carries (subject, dek, pattern tags,
+ * challenge, source id). Reads as a deliberate archival record card
+ * rather than a placeholder waiting for an image.
+ */
+function ArchivalPlate({
+  story,
+  size,
+}: {
+  story: StoryRecord;
+  size: "sm" | "lg";
+}) {
+  const challenge = getChallenge(story.challenges[0]);
+  const isLarge = size === "lg";
+
+  // Pattern tags come through as "Late Bloomer • Reinvention • Starting Again"
+  const patternTags = (story.pattern ?? "")
+    .split("•")
+    .map((t) => t.trim())
+    .filter(Boolean)
+    .slice(0, 3);
 
   return (
-    <svg
-      viewBox="0 0 400 500"
-      className="w-full h-full"
-      preserveAspectRatio="xMidYMid slice"
-    >
-      <defs>
-        <radialGradient id={bgId} cx="50%" cy="42%" r="65%">
-          <stop offset="0%" stopColor="#1b2420" />
-          <stop offset="100%" stopColor="#121915" />
-        </radialGradient>
-      </defs>
-      <rect width="400" height="500" fill={`url(#${bgId})`} />
-
-      {/* Concentric engraved rings */}
-      <g fill="none" stroke="#b8863b" strokeOpacity="0.55">
-        <circle cx="200" cy="210" r="118" strokeWidth="1" />
-        <circle cx="200" cy="210" r="104" strokeWidth="0.5" />
-        <circle cx="200" cy="210" r="96" strokeWidth="0.5" />
-      </g>
-
-      {/* Radiating fine lines, like an engraved plate */}
-      <g stroke="#b8863b" strokeOpacity="0.28" strokeWidth="0.5">
-        {Array.from({ length: 48 }).map((_, i) => {
-          const angle = (i / 48) * Math.PI * 2;
-          const r1 = 96;
-          const r2 = 118;
-          const x1 = 200 + Math.cos(angle) * r1;
-          const y1 = 210 + Math.sin(angle) * r1;
-          const x2 = 200 + Math.cos(angle) * r2;
-          const y2 = 210 + Math.sin(angle) * r2;
-          return <line key={i} x1={x1} y1={y1} x2={x2} y2={y2} />;
-        })}
-      </g>
-
-      {/* Subject initial */}
-      <text
-        x="200"
-        y="235"
-        textAnchor="middle"
-        fontFamily="Newsreader, Georgia, serif"
-        fontStyle="italic"
-        fontSize="92"
-        fill="#ece4d3"
-        fillOpacity="0.92"
+    <div className="absolute inset-0 flex flex-col justify-between overflow-hidden">
+      {/* Engraved guilloche field — the texture of a certificate or
+          banknote, scaled large and kept very low contrast so it reads
+          as material, not decoration. */}
+      <svg
+        className="absolute inset-0 w-full h-full"
+        viewBox="0 0 400 500"
+        preserveAspectRatio="xMidYMid slice"
+        aria-hidden
       >
-        {initial}
-      </text>
+        <defs>
+          <radialGradient id={`plate-${story.slug}`} cx="30%" cy="18%" r="95%">
+            <stop offset="0%" stopColor="#222e28" />
+            <stop offset="100%" stopColor="#121915" />
+          </radialGradient>
+        </defs>
+        <rect width="400" height="500" fill={`url(#plate-${story.slug})`} />
+        <g stroke="#b8863b" strokeOpacity="0.13" fill="none">
+          {Array.from({ length: 26 }).map((_, i) => (
+            <circle
+              key={i}
+              cx={330}
+              cy={430}
+              r={30 + i * 22}
+              strokeWidth="0.6"
+            />
+          ))}
+        </g>
+        {/* Horizontal rule field, like ledger paper */}
+        <g stroke="#ece4d3" strokeOpacity="0.04">
+          {Array.from({ length: 22 }).map((_, i) => (
+            <line
+              key={i}
+              x1="0"
+              x2="400"
+              y1={40 + i * 21}
+              y2={40 + i * 21}
+              strokeWidth="0.5"
+            />
+          ))}
+        </g>
+      </svg>
 
-      {/* Fine grain texture */}
-      <filter id={filterId}>
-        <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" />
-        <feColorMatrix type="saturate" values="0" />
-      </filter>
-      <pattern id={patternId} width="100%" height="100%">
-        <rect width="100%" height="100%" filter={`url(#${filterId})`} opacity="0.05" />
-      </pattern>
-      <rect width="400" height="500" fill={`url(#${patternId})`} opacity="0.4" />
-    </svg>
+      {/* TOP: classification line */}
+      <div className={`relative ${isLarge ? "p-6" : "p-4"}`}>
+        <div className="flex items-center gap-2">
+          <span className="h-px w-6 bg-brass" />
+          <span className={`font-stamp ${isLarge ? "text-[10px]" : "text-[9px]"} uppercase tracking-[0.18em] text-brass`}>
+            {challenge?.prompt ?? "Record"}
+          </span>
+        </div>
+      </div>
+
+      {/* MIDDLE: the name, set as the hero of the composition */}
+      <div className={`relative ${isLarge ? "px-6" : "px-4"} -mt-4`}>
+        <h3
+          className={`font-serif text-paper leading-[0.95] ${
+            isLarge ? "text-[2.6rem]" : "text-[1.6rem]"
+          }`}
+        >
+          {story.subject}
+        </h3>
+        <p
+          className={`font-serif italic text-brass-bright mt-2 leading-snug ${
+            isLarge ? "text-base" : "text-[12px]"
+          }`}
+        >
+          {story.dek}
+        </p>
+      </div>
+
+      {/* BOTTOM: pattern tags + record id, the "archival" metadata */}
+      <div className={`relative ${isLarge ? "p-6" : "p-4"}`}>
+        {patternTags.length > 0 && (
+          <div className="flex flex-wrap gap-x-2 gap-y-1 mb-3">
+            {patternTags.map((tag) => (
+              <span
+                key={tag}
+                className={`font-stamp uppercase tracking-[0.1em] text-paper-dim ${
+                  isLarge ? "text-[9px]" : "text-[8px]"
+                }`}
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
+        <div className="flex items-center justify-between border-t border-line pt-2.5">
+          <span className={`font-stamp uppercase tracking-[0.14em] text-paper-dim ${isLarge ? "text-[9px]" : "text-[8px]"}`}>
+            Verified Record
+          </span>
+          {story.sourceId && (
+            <span className={`font-stamp tracking-[0.1em] text-brass ${isLarge ? "text-[9px]" : "text-[8px]"}`}>
+              {story.sourceId}
+            </span>
+          )}
+        </div>
+      </div>
+    </div>
   );
 }
