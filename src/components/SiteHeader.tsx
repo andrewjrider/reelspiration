@@ -12,7 +12,7 @@ export default function SiteHeader() {
         </Link>
         <nav className="hidden sm:flex items-center gap-6 font-stamp text-xs uppercase tracking-[0.12em] text-paper-dim">
           <Link href="/challenges" className="hover:text-brass transition-colors">
-            What Are You Facing
+            Stories
           </Link>
           <Link href="/collections" className="hover:text-brass transition-colors">
             Collections

@@ -17,7 +17,7 @@ export type ChallengeSlug =
 
 export interface Challenge {
   slug: ChallengeSlug;
-  /** The audience moment, in the visitor's own words */
+  /** Display label for this story category */
   prompt: string; // e.g. "I feel too old"
   description: string;
 }

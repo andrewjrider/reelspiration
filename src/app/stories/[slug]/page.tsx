@@ -151,7 +151,7 @@ export default async function StoryPage({
       {related.length > 0 && (
         <div className="mt-16">
           <p className="font-stamp text-[10px] uppercase tracking-[0.12em] text-paper-dim mb-4">
-            If This Was Proof, So Is This
+            More Like This
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {related.map((s) => (

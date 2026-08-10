@@ -82,14 +82,15 @@ export default function Home() {
       </section>
       </AtmosphericBand>
 
-      {/* SIGNATURE ELEMENT — what are you facing today */}
+      {/* SIGNATURE ELEMENT — story categories, framed as an invitation to
+          browse rather than a prompt to self-diagnose */}
       <section className="max-w-6xl mx-auto px-6 pb-24">
         <div className="flex items-baseline justify-between mb-5">
           <h2 className="font-stamp text-xs uppercase tracking-[0.2em] text-paper-dim">
-            What are you facing today?
+            Start With a Story
           </h2>
           <span className="hidden sm:block font-serif italic text-paper-dim text-sm">
-            Choose the moment that matches where you are
+            Six kinds of proof, one hundred and ten records
           </span>
         </div>
         <ChallengePicker />

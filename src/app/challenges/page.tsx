@@ -10,11 +10,11 @@ export default function ChallengesIndex() {
             Start Here
           </p>
           <h1 className="font-serif text-4xl text-paper max-w-xl leading-tight">
-            What are you facing today?
+            Six kinds of proof.
           </h1>
           <p className="text-paper-dim mt-4 max-w-lg leading-relaxed">
-            Every collection in this library is organized around a real moment,
-            not a category. Choose the one that matches where you are.
+            Every story in this library turns on a moment most people
+            assumed was the ending. Pick the kind you want to read.
           </p>
         </div>
       </AtmosphericBand>

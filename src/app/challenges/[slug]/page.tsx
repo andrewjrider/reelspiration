@@ -21,10 +21,10 @@ export default async function ChallengePage({
   return (
     <div className="max-w-5xl mx-auto px-6 py-16">
       <p className="font-stamp text-xs uppercase tracking-[0.2em] text-brass mb-4">
-        Audience Moment
+        Collection
       </p>
-      <h1 className="font-serif text-4xl sm:text-5xl italic text-paper">
-        &ldquo;{challenge.prompt}&rdquo;
+      <h1 className="font-serif text-4xl sm:text-5xl text-paper">
+        {challenge.prompt}
       </h1>
       <p className="text-paper-dim mt-4 max-w-lg leading-relaxed">
         {challenge.description}
