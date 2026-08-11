@@ -1,15 +1,8 @@
 import { StoryRecord } from "./types";
 
-// Generated from the 10 real Reelspiration volumes (+ military commanders
-// companion) via scripts/parse-volumes.mjs + scripts/build-story-records.mjs.
-// A small curated set is marked 'published' (one strong, recognizable story
-// per volume) so the live site demonstrates itself end to end. Everything
-// else is 'needs-review' pending real editorial approval — see
-// IMPORT_REPORT.md for the full list and what's blocking each one.
-//
-// Fixed 2026-08-06: parser's section-boundary detection missed grid-table
-// wrapped headings in some volumes (Volume 10 and others), causing field
-// content to bleed together. See BUGFIX_LOG.md.
+// Generated from the 10 real Reelspiration volumes via
+// scripts/parse-volumes.mjs + scripts/build-story-records.mjs.
+// Curated set marked published; everything else needs-review.
 
 export const importedStories: StoryRecord[] = [
   {
@@ -32,6 +25,7 @@ export const importedStories: StoryRecord[] = [
     "carouselAuthored": "-----------------------------------------------------------------------\n  SLIDE                               COPY\n  ----------------------------------- -----------------------------------\n  1                                   Kobe Bryant became known not only\n                                      for difficult shots, but for the\n                                      hours of preparation that made\n                                      difficult moments feel familiar.\n\n  2                                   Bryant entered the NBA directly\n                                      from high school and spent his\n                                      career under intense expectations.\n\n  3                                   Early air balls, injuries,\n                                      championship losses, public\n                                      criticism, and the challenge of\n                                      evolving across twenty seasons\n                                      repeatedly tested his identity.\n\n  4                                   He used film study, conditioning,\n                                      footwork, repetition, and a\n                                      willingness to confront weaknesses.\n                                      After tearing his Achilles tendon,\n                                      he returned to play again.\n\n  5                                   Bryant won five NBA championships\n                                      and became one of basketball's most\n                                      influential competitors.\n\n  6                                   Confidence is often memory---the\n                                      body remembering how many times it\n                                      prepared.\n\n  7                                   Excellence requires recovery and\n                                      perspective as well as repetition.\n  -----------------------------------------------------------------------\n\n**SIX-SCENE VISUAL STORYBOARD**\n\n> **1.** Open with the instantly recognizable symbol or setting of Kobe\n> Bryant.\n>\n> **2.** Establish the people and the stakes before the crisis.\n>\n> **3.** Show the central failure, threat, or impossible constraint\n> without sensationalism.\n>\n> **4.** Focus on the key decision and coordinated action.\n>\n> **5.** Reveal the outcome and the human cost or relief.\n>\n> **6.** End on the Reelspiration line with clean branded typography.",
     "editorialGuardrails": "Acknowledge the 2003 sexual-assault case in full biographical context;\ndo not present achievement as moral absolution.",
     "sourceId": "RS-G001",
+    "pattern": "Obsessive preparation",
     "audienceMoments": [
       "Mamba\nMentality"
     ],
@@ -54,7 +48,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "published",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "muhammad-ali",
@@ -76,6 +70,7 @@ export const importedStories: StoryRecord[] = [
     "carouselAuthored": "-----------------------------------------------------------------------\n  SLIDE                               COPY\n  ----------------------------------- -----------------------------------\n  1                                   Muhammad Ali lost years of his\n                                      athletic prime after refusing\n                                      induction into the U.S. Army during\n                                      the Vietnam War.\n\n  2                                   Ali became heavyweight champion\n                                      through speed, confidence, and a\n                                      voice unlike anything boxing had\n                                      seen.\n\n  3                                   His refusal led to conviction, the\n                                      loss of his boxing license, and\n                                      exclusion from competition while\n                                      his case moved through the courts.\n\n  4                                   Ali continued speaking publicly.\n                                      The U.S. Supreme Court eventually\n                                      overturned his conviction, and he\n                                      returned to boxing against a new\n                                      generation of elite heavyweights.\n\n  5                                   He regained the heavyweight title\n                                      and became one of the most\n                                      recognizable athletes and public\n                                      figures in history.\n\n  6                                   A principle that costs nothing has\n                                      not yet been tested by pressure.\n\n  7                                   Courage includes accepting\n                                      consequences while continuing to\n                                      argue for what you believe.\n  -----------------------------------------------------------------------\n\n**SIX-SCENE VISUAL STORYBOARD**\n\n> **1.** Open with the instantly recognizable symbol or setting of\n> Muhammad Ali.\n>\n> **2.** Establish the people and the stakes before the crisis.\n>\n> **3.** Show the central failure, threat, or impossible constraint\n> without sensationalism.\n>\n> **4.** Focus on the key decision and coordinated action.\n>\n> **5.** Reveal the outcome and the human cost or relief.\n>\n> **6.** End on the Reelspiration line with clean branded typography.",
     "editorialGuardrails": "Verify all dates, quotations, casualty figures, and rights before\npublication.",
     "sourceId": "RS-G002",
+    "pattern": "Conviction and return",
     "audienceMoments": [
       "MOMENT Conviction and return My beliefs may cost me status. ----------------------------------- ----------------------------------- RECOGNITION CORE EMOTION Global / high Conviction"
     ],
@@ -98,7 +93,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "tom-brady",
@@ -120,6 +115,7 @@ export const importedStories: StoryRecord[] = [
     "carouselAuthored": "-----------------------------------------------------------------------\n  SLIDE                               COPY\n  ----------------------------------- -----------------------------------\n  1                                   Six quarterbacks were selected\n                                      before Tom Brady in the 2000 NFL\n                                      Draft.\n\n  2                                   Brady entered professional football\n                                      without the athletic profile of a\n                                      top prospect and began as a backup.\n\n  3                                   Low expectations, competition for\n                                      playing time, injuries, changing\n                                      teammates, and two decades of\n                                      physical demands created repeated\n                                      tests.\n\n  4                                   He prepared obsessively, learned\n                                      systems, earned opportunities, and\n                                      continued adapting his training and\n                                      decision-making as he aged.\n\n  5                                   Brady won seven Super Bowls and\n                                      became the most accomplished\n                                      quarterback in NFL history.\n\n  6                                   Being overlooked can become fuel,\n                                      but only disciplined improvement\n                                      converts it into evidence.\n\n  7                                   Longevity is built by adaptation,\n                                      preparation, and teams---not\n                                      motivation alone.\n  -----------------------------------------------------------------------\n\n**SIX-SCENE VISUAL STORYBOARD**\n\n> **1.** Open with the instantly recognizable symbol or setting of Tom\n> Brady.\n>\n> **2.** Establish the people and the stakes before the crisis.\n>\n> **3.** Show the central failure, threat, or impossible constraint\n> without sensationalism.\n>\n> **4.** Focus on the key decision and coordinated action.\n>\n> **5.** Reveal the outcome and the human cost or relief.\n>\n> **6.** End on the Reelspiration line with clean branded typography.",
     "editorialGuardrails": "Verify all dates, quotations, casualty figures, and rights before\npublication.",
     "sourceId": "RS-G003",
+    "pattern": "Underestimation and longevity",
     "audienceMoments": [
       "MOMENT Underestimation and longevity I was not chosen early. ----------------------------------- ----------------------------------- RECOGNITION CORE EMOTION Global / high Belief"
     ],
@@ -142,7 +138,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "serena-williams",
@@ -164,6 +160,7 @@ export const importedStories: StoryRecord[] = [
     "carouselAuthored": "-----------------------------------------------------------------------\n  SLIDE                               COPY\n  ----------------------------------- -----------------------------------\n  1                                   Serena Williams returned to Grand\n                                      Slam finals after a\n                                      life-threatening childbirth\n                                      experience and difficult recovery.\n\n  2                                   Williams had already established\n                                      herself as one of tennis's greatest\n                                      champions before becoming a mother\n                                      in 2017.\n\n  3                                   She experienced serious postpartum\n                                      medical complications and then\n                                      faced the physical, emotional, and\n                                      professional demands of returning\n                                      to elite competition.\n\n  4                                   Williams recovered, trained,\n                                      adjusted expectations, and returned\n                                      to the tour while also speaking\n                                      publicly about maternal-health\n                                      disparities.\n\n  5                                   She reached four additional Grand\n                                      Slam singles finals after\n                                      childbirth and expanded her\n                                      influence beyond sport.\n\n  6                                   A changed body and changed life do\n                                      not mean your ambition was invalid.\n                                      They mean the path back must\n                                      respect reality.\n\n  7                                   Recovery is not a race against\n                                      anyone else's timeline.\n  -----------------------------------------------------------------------\n\n**SIX-SCENE VISUAL STORYBOARD**\n\n> **1.** Open with the instantly recognizable symbol or setting of\n> Serena Williams.\n>\n> **2.** Establish the people and the stakes before the crisis.\n>\n> **3.** Show the central failure, threat, or impossible constraint\n> without sensationalism.\n>\n> **4.** Focus on the key decision and coordinated action.\n>\n> **5.** Reveal the outcome and the human cost or relief.\n>\n> **6.** End on the Reelspiration line with clean branded typography.",
     "editorialGuardrails": "Do not imply her outcome is typical or achievable through determination\nalone.",
     "sourceId": "RS-G004",
+    "pattern": "Maternal health and elite return",
     "audienceMoments": [
       "MOMENT Maternal health and elite return My life changed and I am rebuilding strength. ----------------------------------- ----------------------------------- RECOGNITION CORE EMOTION"
     ],
@@ -186,7 +183,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "usain-bolt",
@@ -208,6 +205,7 @@ export const importedStories: StoryRecord[] = [
     "carouselAuthored": "-----------------------------------------------------------------------\n  SLIDE                               COPY\n  ----------------------------------- -----------------------------------\n  1                                   At 6-foot-5, Usain Bolt was\n                                      unusually tall for an elite\n                                      sprinter---and coaches had to turn\n                                      that difference into speed rather\n                                      than treat it only as a problem.\n\n  2                                   Bolt showed extraordinary talent as\n                                      a young Jamaican runner but also\n                                      dealt with injuries, inconsistent\n                                      preparation, and questions about\n                                      how his height affected starts and\n                                      mechanics.\n\n  3                                   Sprint success is measured in\n                                      hundredths of a second. Poor\n                                      starts, technical errors, or health\n                                      setbacks can erase natural talent.\n\n  4                                   Bolt and his coaches refined his\n                                      start, stride, strength, and race\n                                      execution while preserving the\n                                      long-stride advantage his frame\n                                      provided.\n\n  5                                   He won eight Olympic gold medals\n                                      and set world records in the 100\n                                      and 200 meters.\n\n  6                                   Do not sand away every difference\n                                      before learning whether it contains\n                                      an advantage.\n\n  7                                   Talent becomes repeatable only\n                                      after technique respects reality.\n  -----------------------------------------------------------------------\n\n**SIX-SCENE VISUAL STORYBOARD**\n\n> **1.** Open with the instantly recognizable symbol or setting of Usain\n> Bolt.\n>\n> **2.** Establish the people and the stakes before the crisis.\n>\n> **3.** Show the central failure, threat, or impossible constraint\n> without sensationalism.\n>\n> **4.** Focus on the key decision and coordinated action.\n>\n> **5.** Reveal the outcome and the human cost or relief.\n>\n> **6.** End on the Reelspiration line with clean branded typography.",
     "editorialGuardrails": "Verify all dates, quotations, casualty figures, and rights before\npublication.",
     "sourceId": "RS-G005",
+    "pattern": "Physical difference and technical My body or style does not fit the",
     "audienceMoments": [
       "MOMENT Physical difference and technical My body or style does not fit the refinement standard model. ----------------------------------- ----------------------------------- RECOGNITION CORE EMOTION"
     ],
@@ -230,7 +228,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "pel",
@@ -252,6 +250,7 @@ export const importedStories: StoryRecord[] = [
     "carouselAuthored": "-----------------------------------------------------------------------\n  SLIDE                               COPY\n  ----------------------------------- -----------------------------------\n  1                                   Pelé grew up in poverty in Brazil\n                                      and practiced with improvised balls\n                                      before becoming soccer's first\n                                      global superstar.\n\n  2                                   Edson Arantes do Nascimento learned\n                                      the game in Bauru, where his family\n                                      had limited means and his father\n                                      had played professionally.\n\n  3                                   Formal equipment and opportunity\n                                      were limited, and the pressure of\n                                      representing Brazil arrived while\n                                      he was still a teenager.\n\n  4                                   Pelé developed through local play,\n                                      disciplined training, Santos FC,\n                                      and the Brazilian national team. At\n                                      seventeen, he scored in the 1958\n                                      World Cup final.\n\n  5                                   He won three World Cups and became\n                                      one of the most recognized athletes\n                                      in history.\n\n  6                                   Use what you have seriously enough\n                                      that you are ready when better\n                                      tools arrive.\n\n  7                                   Joy and discipline can coexist at\n                                      the highest level.\n  -----------------------------------------------------------------------\n\n**SIX-SCENE VISUAL STORYBOARD**\n\n> **1.** Open with the instantly recognizable symbol or setting of Pelé.\n>\n> **2.** Establish the people and the stakes before the crisis.\n>\n> **3.** Show the central failure, threat, or impossible constraint\n> without sensationalism.\n>\n> **4.** Focus on the key decision and coordinated action.\n>\n> **5.** Reveal the outcome and the human cost or relief.\n>\n> **6.** End on the Reelspiration line with clean branded typography.",
     "editorialGuardrails": "Acknowledge complexity in personal biography when expanding long-form\ncoverage.",
     "sourceId": "RS-G006",
+    "pattern": "Poverty and global achievement",
     "audienceMoments": [
       "MOMENT Poverty and global achievement My beginning offers few resources. ----------------------------------- ----------------------------------- RECOGNITION CORE EMOTION"
     ],
@@ -274,7 +273,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "wayne-gretzky",
@@ -296,6 +295,7 @@ export const importedStories: StoryRecord[] = [
     "carouselAuthored": "-----------------------------------------------------------------------\n  SLIDE                               COPY\n  ----------------------------------- -----------------------------------\n  1                                   Wayne Gretzky dominated hockey not\n                                      through size or intimidation, but\n                                      through anticipation.\n\n  2                                   Gretzky entered elite hockey with\n                                      extraordinary scoring ability and a\n                                      deep understanding of space,\n                                      timing, and player movement.\n\n  3                                   He was not physically imposing by\n                                      professional hockey standards and\n                                      faced a sport that rewarded speed\n                                      and contact.\n\n  4                                   Gretzky studied patterns, moved to\n                                      open ice before it became open, and\n                                      made teammates more dangerous\n                                      through passing and positioning.\n\n  5                                   He retired holding dozens of NHL\n                                      records and remains the league's\n                                      all-time points leader.\n\n  6                                   Anticipation is preparation moving\n                                      faster than reaction.\n\n  7                                   Making others better is a form of\n                                      individual greatness.\n  -----------------------------------------------------------------------\n\n**SIX-SCENE VISUAL STORYBOARD**\n\n> **1.** Open with the instantly recognizable symbol or setting of Wayne\n> Gretzky.\n>\n> **2.** Establish the people and the stakes before the crisis.\n>\n> **3.** Show the central failure, threat, or impossible constraint\n> without sensationalism.\n>\n> **4.** Focus on the key decision and coordinated action.\n>\n> **5.** Reveal the outcome and the human cost or relief.\n>\n> **6.** End on the Reelspiration line with clean branded typography.",
     "editorialGuardrails": "Verify all dates, quotations, casualty figures, and rights before\npublication.",
     "sourceId": "RS-G007",
+    "pattern": "Intelligence over physical",
     "audienceMoments": [
       "MOMENT Intelligence over physical I am not the biggest or strongest dominance person in the room. ----------------------------------- ----------------------------------- RECOGNITION CORE EMOTION"
     ],
@@ -318,7 +318,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "babe-ruth",
@@ -340,6 +340,7 @@ export const importedStories: StoryRecord[] = [
     "carouselAuthored": "-----------------------------------------------------------------------\n  SLIDE                               COPY\n  ----------------------------------- -----------------------------------\n  1                                   Babe Ruth was sent to a reform\n                                      school as a boy and later\n                                      transformed baseball through a\n                                      style of power hitting the sport\n                                      had never seen at that scale.\n\n  2                                   George Herman Ruth grew up in\n                                      Baltimore and spent much of his\n                                      youth at St. Mary's Industrial\n                                      School, where Brother Matthias\n                                      helped develop his baseball\n                                      ability.\n\n  3                                   His early life was unstable, and\n                                      even as a professional he was known\n                                      for excess and poor discipline.\n\n  4                                   Ruth first excelled as a pitcher,\n                                      then reinvented himself as an\n                                      everyday hitter whose home runs\n                                      changed strategy, attendance, and\n                                      popular culture.\n\n  5                                   He became baseball's first great\n                                      mass-media superstar.\n\n  6                                   Do not confuse the role that\n                                      discovered you with the only role\n                                      you can master.\n\n  7                                   Raw ability creates impact only\n                                      when directed.\n  -----------------------------------------------------------------------\n\n**SIX-SCENE VISUAL STORYBOARD**\n\n> **1.** Open with the instantly recognizable symbol or setting of Babe\n> Ruth.\n>\n> **2.** Establish the people and the stakes before the crisis.\n>\n> **3.** Show the central failure, threat, or impossible constraint\n> without sensationalism.\n>\n> **4.** Focus on the key decision and coordinated action.\n>\n> **5.** Reveal the outcome and the human cost or relief.\n>\n> **6.** End on the Reelspiration line with clean branded typography.",
     "editorialGuardrails": "Avoid romanticizing harmful behavior; distinguish athletic impact from\npersonal conduct.",
     "sourceId": "RS-G008",
+    "pattern": "Difficult childhood and",
     "audienceMoments": [
       "MOMENT Difficult childhood and My early behavior has made people reinvention write me off. ----------------------------------- ----------------------------------- RECOGNITION CORE EMOTION"
     ],
@@ -362,7 +363,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "billie-jean-king",
@@ -384,6 +385,7 @@ export const importedStories: StoryRecord[] = [
     "carouselAuthored": "-----------------------------------------------------------------------\n  SLIDE                               COPY\n  ----------------------------------- -----------------------------------\n  1                                   Billie Jean King did not only win\n                                      major tennis titles. She fought to\n                                      change the economics and visibility\n                                      of women's sport.\n\n  2                                   King became one of the leading\n                                      tennis players of the 1960s and\n                                      1970s.\n\n  3                                   Women received far less prize money\n                                      and institutional support, even\n                                      when attracting major audiences.\n                                      Speaking out risked relationships,\n                                      income, and reputation.\n\n  4                                   King helped organize women players,\n                                      advocated for equal prize money,\n                                      founded the Women's Tennis\n                                      Association, and defeated Bobby\n                                      Riggs in the globally watched\n                                      \"Battle of the Sexes.\"\n\n  5                                   Her work helped create a durable\n                                      professional structure for women's\n                                      tennis and advanced equal-pay\n                                      efforts in sport.\n\n  6                                   Achievement gives you a platform.\n                                      Courage determines whether you use\n                                      it only for yourself.\n\n  7                                   Collective organization converts\n                                      individual fame into structural\n                                      change.\n  -----------------------------------------------------------------------\n\n**SIX-SCENE VISUAL STORYBOARD**\n\n> **1.** Open with the instantly recognizable symbol or setting of\n> Billie Jean King.\n>\n> **2.** Establish the people and the stakes before the crisis.\n>\n> **3.** Show the central failure, threat, or impossible constraint\n> without sensationalism.\n>\n> **4.** Focus on the key decision and coordinated action.\n>\n> **5.** Reveal the outcome and the human cost or relief.\n>\n> **6.** End on the Reelspiration line with clean branded typography.",
     "editorialGuardrails": "Verify all dates, quotations, casualty figures, and rights before\npublication.",
     "sourceId": "RS-G009",
+    "pattern": "Equality advocacy and competitive I am succeeding inside a system",
     "audienceMoments": [
       "Battle of the Sexes."
     ],
@@ -406,7 +408,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "roger-federer",
@@ -428,6 +430,7 @@ export const importedStories: StoryRecord[] = [
     "carouselAuthored": "-----------------------------------------------------------------------\n  SLIDE                               COPY\n  ----------------------------------- -----------------------------------\n  1                                   Roger Federer's elegant style\n                                      eventually looked effortless---but\n                                      his early career included\n                                      frustration, temper, and the work\n                                      of learning emotional control.\n\n  2                                   Federer was recognized as a gifted\n                                      junior with extraordinary range and\n                                      feel for the game.\n\n  3                                   Talent did not immediately become\n                                      consistent dominance. Losses,\n                                      impatience, and visible anger\n                                      interfered with performance.\n\n  4                                   He matured technically and\n                                      emotionally, improved fitness,\n                                      simplified decisions under\n                                      pressure, and built a team capable\n                                      of sustaining a long career.\n\n  5                                   Federer won twenty Grand Slam\n                                      singles titles and became one of\n                                      tennis's most admired champions.\n\n  6                                   Composure is not personality. It is\n                                      a skill that can be trained.\n\n  7                                   Elegance is the result of removing\n                                      wasted motion---physical and\n                                      emotional.\n  -----------------------------------------------------------------------\n\n**SIX-SCENE VISUAL STORYBOARD**\n\n> **1.** Open with the instantly recognizable symbol or setting of Roger\n> Federer.\n>\n> **2.** Establish the people and the stakes before the crisis.\n>\n> **3.** Show the central failure, threat, or impossible constraint\n> without sensationalism.\n>\n> **4.** Focus on the key decision and coordinated action.\n>\n> **5.** Reveal the outcome and the human cost or relief.\n>\n> **6.** End on the Reelspiration line with clean branded typography.",
     "editorialGuardrails": "Verify all dates, quotations, casualty figures, and rights before\npublication.",
     "sourceId": "RS-G010",
+    "pattern": "Setback, patience, emotional",
     "audienceMoments": [
       "MOMENT Setback, patience, emotional My talent is real but my emotions control keep disrupting it. ----------------------------------- ----------------------------------- RECOGNITION CORE EMOTION"
     ],
@@ -450,7 +453,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "colonel-harland-sanders",
@@ -494,7 +497,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "published",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "walt-disney",
@@ -542,7 +545,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "steve-jobs",
@@ -590,7 +593,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "james-dyson",
@@ -633,7 +636,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "sara-blakely",
@@ -680,7 +683,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "published",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "soichiro-honda",
@@ -727,7 +730,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "howard-schultz",
@@ -774,7 +777,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "jan-koum",
@@ -821,7 +824,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "jack-ma",
@@ -868,7 +871,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "reed-hastings-and-marc-randolph",
@@ -915,7 +918,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "wilma-rudolph",
@@ -961,7 +964,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "published",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "bethany-hamilton",
@@ -1007,7 +1010,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "jim-abbott",
@@ -1053,7 +1056,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "simone-biles",
@@ -1099,7 +1102,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "lionel-messi",
@@ -1145,7 +1148,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "kurt-warner",
@@ -1191,7 +1194,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "alex-smith",
@@ -1237,7 +1240,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "jackie-robinson",
@@ -1284,7 +1287,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "niki-lauda",
@@ -1330,7 +1333,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "michael-jordan",
@@ -1376,7 +1379,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "marie-curie",
@@ -1418,7 +1421,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "published",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "katherine-johnson",
@@ -1460,7 +1463,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "louis-braille",
@@ -1502,7 +1505,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "percy-julian",
@@ -1544,7 +1547,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "grace-hopper",
@@ -1586,7 +1589,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "hedy-lamarr",
@@ -1628,7 +1631,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "george-washington-carver",
@@ -1670,7 +1673,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "temple-grandin",
@@ -1712,7 +1715,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "garrett-morgan",
@@ -1754,7 +1757,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "stephen-hawking",
@@ -1796,7 +1799,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "abraham-lincoln",
@@ -1838,7 +1841,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "published",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "harriet-tubman",
@@ -1880,7 +1883,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "winston-churchill",
@@ -1922,7 +1925,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "rosa-parks",
@@ -1965,7 +1968,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "nelson-mandela",
@@ -2007,7 +2010,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "frederick-douglass",
@@ -2049,7 +2052,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "helen-keller",
@@ -2091,7 +2094,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "ernest-shackleton",
@@ -2133,7 +2136,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "published",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "desmond-doss",
@@ -2176,7 +2179,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "v-clav-havel",
@@ -2218,7 +2221,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "george-washington",
@@ -2265,7 +2268,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "published",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "ulysses-s-grant",
@@ -2312,7 +2315,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "dwight-d-eisenhower",
@@ -2359,7 +2362,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "chester-w-nimitz",
@@ -2407,7 +2410,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "george-c-marshall",
@@ -2454,7 +2457,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "horatio-nelson",
@@ -2502,7 +2505,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "hannibal-barca",
@@ -2549,7 +2552,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "napoleon-bonaparte",
@@ -2596,7 +2599,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "alexander-the-great",
@@ -2644,7 +2647,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "admiral-yi-sun-sin",
@@ -2691,7 +2694,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "audie-murphy",
@@ -2733,7 +2736,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "published",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "doris-miller",
@@ -2775,7 +2778,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "roy-benavidez",
@@ -2818,7 +2821,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "tammy-duckworth",
@@ -2861,7 +2864,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "witold-pilecki",
@@ -2903,7 +2906,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "nancy-wake",
@@ -2945,7 +2948,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "tibor-rubin",
@@ -2987,7 +2990,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "eugene-bullard",
@@ -3029,7 +3032,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "mary-edwards-walker",
@@ -3071,7 +3074,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "charles-mcgee",
@@ -3113,7 +3116,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "amy-purdy",
@@ -3155,7 +3158,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "published",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "terry-fox",
@@ -3198,7 +3201,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "malala-yousafzai",
@@ -3241,7 +3244,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "nando-parrado",
@@ -3283,7 +3286,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "juliane-koepcke",
@@ -3325,7 +3328,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "lauren-wasser",
@@ -3367,7 +3370,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "alex-zanardi",
@@ -3410,7 +3413,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "randy-pausch",
@@ -3452,7 +3455,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "hugh-herr",
@@ -3494,7 +3497,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "joni-eareckson-tada",
@@ -3536,7 +3539,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "tiger-woods",
@@ -3558,6 +3561,7 @@ export const importedStories: StoryRecord[] = [
     "carouselAuthored": "-----------------------------------------------------------------------\n  SLIDE                               COPY\n  ----------------------------------- -----------------------------------\n  1                                   The comeback no one could promise.\n\n  2                                   Tiger Woods had dominated\n                                      golf---and then lost health,\n                                      reputation, and momentum.\n\n  3                                   Back surgeries made competing\n                                      uncertain.\n\n  4                                   There was no guarantee the old\n                                      victories would return.\n\n  5                                   He rebuilt quietly: rehabilitation,\n                                      adaptation, repetition.\n\n  6                                   In 2019, he won the\n                                      Masters---eleven years after his\n                                      previous major.\n\n  7                                   THE REELSPIRATION: The fall is part\n                                      of the story. It does not have to\n                                      be the ending.\n  -----------------------------------------------------------------------\n\n**SIX-SCENE VISUAL STORYBOARD**\n\n> **1.** Empty early-morning golf course; archival headlines implied\n> through abstract clippings.\n>\n> **2.** Close details of rehabilitation, careful movement, and a golf\n> club resting beside a hospital corridor.\n>\n> **3.** Practice range at dawn; restrained, repetitive swings.\n>\n> **4.** Augusta-inspired fairway imagery without unlicensed tournament\n> marks.\n>\n> **5.** A lone player walking toward a final green as the score\n> tightens.\n>\n> **6.** Quiet celebration, family embrace, and final branded card.",
     "editorialGuardrails": "Do not frame victory as erasing personal harm. Avoid medical certainty,\nunlicensed Masters footage, and claims about private recovery not\nsupported by sources.",
     "sourceId": "RS-C001",
+    "pattern": "Public fall, injury, return",
     "audienceMoments": [
       "MOMENT Public fall, injury, return I made mistakes and think my best days are gone. ----------------------------------- ----------------------------------- RECOGNITION CORE EMOTION"
     ],
@@ -3580,7 +3584,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "published",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "robert-downey-jr",
@@ -3602,6 +3606,7 @@ export const importedStories: StoryRecord[] = [
     "carouselAuthored": "-----------------------------------------------------------------------\n  SLIDE                               COPY\n  ----------------------------------- -----------------------------------\n  1                                   Hollywood knew his talent. It\n                                      stopped trusting his reliability.\n\n  2                                   Addiction and arrests disrupted\n                                      Robert Downey Jr.'s career.\n\n  3                                   Studios considered him a serious\n                                      risk.\n\n  4                                   His comeback began before the\n                                      blockbuster---with recovery and\n                                      small proof.\n\n  5                                   Trust returned one commitment at a\n                                      time.\n\n  6                                   Iron Man launched a new chapter and\n                                      a global franchise.\n\n  7                                   THE REELSPIRATION: A second chance\n                                      becomes real when your actions make\n                                      it believable.\n  -----------------------------------------------------------------------\n\n**SIX-SCENE VISUAL STORYBOARD**\n\n> **1.** Spotlight on an empty stage.\n>\n> **2.** Abstract newspaper and courtroom imagery; no sensational\n> reenactment.\n>\n> **3.** Quiet recovery routines and a calendar marked one day at a\n> time.\n>\n> **4.** Small film set, arrival on time, script in hand.\n>\n> **5.** Armor-like silhouette forming from light, avoiding trademark\n> replication.\n>\n> **6.** Awards-stage glow and final takeaway.",
     "editorialGuardrails": "Avoid glamorizing addiction or implying recovery follows one formula.\nVerify awards and career dates. Do not use Marvel marks without rights.",
     "sourceId": "RS-C002",
+    "pattern": "Addiction, accountability,",
     "audienceMoments": [
       "MOMENT Addiction, accountability, My choices have cost me professional return opportunities. ----------------------------------- ----------------------------------- RECOGNITION CORE EMOTION"
     ],
@@ -3624,7 +3629,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "george-foreman",
@@ -3646,6 +3651,7 @@ export const importedStories: StoryRecord[] = [
     "carouselAuthored": "-----------------------------------------------------------------------\n  SLIDE                               COPY\n  ----------------------------------- -----------------------------------\n  1                                   He lost the title. Twenty years\n                                      later, he won it back.\n\n  2                                   George Foreman was once boxing's\n                                      most feared young champion.\n\n  3                                   After major defeats, he left the\n                                      sport.\n\n  4                                   When he returned, people saw age.\n\n  5                                   Foreman used patience and\n                                      experience instead of trying to\n                                      copy his younger self.\n\n  6                                   At 45, he became heavyweight\n                                      champion again.\n\n  7                                   THE REELSPIRATION: You can return\n                                      wiser, not younger.\n  -----------------------------------------------------------------------\n\n**SIX-SCENE VISUAL STORYBOARD**\n\n> **1.** Young champion silhouette under harsh arena lights.\n>\n> **2.** Rope-a-dope-inspired abstract ring imagery without recreating\n> copyrighted footage.\n>\n> **3.** Empty gym and years passing through changing calendars.\n>\n> **4.** Older Foreman training with calm pacing.\n>\n> **5.** Final-round bell and restrained knockout silhouette.\n>\n> **6.** Champion belt in soft light; branded ending.",
     "editorialGuardrails": "Do not oversimplify the Ali fight or glorify injury. Verify title dates\nand age through boxing records.",
     "sourceId": "RS-C003",
+    "pattern": "Defeat, reinvention, late-career",
     "audienceMoments": [
       "MOMENT Defeat, reinvention, late-career I think my window has closed. return ----------------------------------- ----------------------------------- RECOGNITION CORE EMOTION"
     ],
@@ -3668,7 +3674,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "tina-turner",
@@ -3690,6 +3696,7 @@ export const importedStories: StoryRecord[] = [
     "carouselAuthored": "-----------------------------------------------------------------------\n  SLIDE                               COPY\n  ----------------------------------- -----------------------------------\n  1                                   She did not just rebuild a career.\n                                      She rebuilt a life.\n\n  2                                   Tina Turner was famous---but living\n                                      under abuse and control.\n\n  3                                   Leaving meant uncertainty,\n                                      financial struggle, and starting\n                                      over.\n\n  4                                   She accepted smaller stages and\n                                      rebuilt her identity.\n\n  5                                   In her forties, the world finally\n                                      heard Tina Turner on her own terms.\n\n  6                                   Private Dancer launched one of\n                                      music's greatest second acts.\n\n  7                                   THE REELSPIRATION: Freedom may look\n                                      like loss before it looks like\n                                      possibility.\n  -----------------------------------------------------------------------\n\n**SIX-SCENE VISUAL STORYBOARD**\n\n> **1.** Stage lights and a powerful silhouette.\n>\n> **2.** Backstage hallway narrowing into darkness; no graphic abuse\n> depiction.\n>\n> **3.** A suitcase, hotel room, and open road.\n>\n> **4.** Small club stage with sparse audience.\n>\n> **5.** Studio microphone and rising lights.\n>\n> **6.** Solo performer before a stadium-scale glow.",
     "editorialGuardrails": "Use survivor-centered language. Avoid unsupported private details.\nInclude domestic-violence resource language where platform policy and\naudience context make it appropriate.",
     "sourceId": "RS-C004",
+    "pattern": "Abuse, departure, artistic",
     "audienceMoments": [
       "MOMENT Abuse, departure, artistic I need to leave a life that is reinvention hurting me. ----------------------------------- ----------------------------------- RECOGNITION CORE EMOTION"
     ],
@@ -3712,7 +3719,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "michael-phelps",
@@ -3734,6 +3741,7 @@ export const importedStories: StoryRecord[] = [
     "carouselAuthored": "-----------------------------------------------------------------------\n  SLIDE                               COPY\n  ----------------------------------- -----------------------------------\n  1                                   He had more Olympic medals than\n                                      anyone in history---and still\n                                      needed help.\n\n  2                                   Michael Phelps built his identity\n                                      around winning.\n\n  3                                   Outside the pool, he struggled with\n                                      depression and direction.\n\n  4                                   Achievement could not treat what he\n                                      was hiding.\n\n  5                                   He entered treatment and began\n                                      speaking honestly.\n\n  6                                   His comeback included medals---but\n                                      also a new definition of strength.\n\n  7                                   THE REELSPIRATION: Your\n                                      accomplishments do not disqualify\n                                      your pain.\n  -----------------------------------------------------------------------\n\n**SIX-SCENE VISUAL STORYBOARD**\n\n> **1.** Olympic-style pool lanes before dawn.\n>\n> **2.** Medals on a table while the room remains dark.\n>\n> **3.** A swimmer alone after the crowd leaves.\n>\n> **4.** Therapy doorway and honest conversation, respectfully\n> portrayed.\n>\n> **5.** Return to the pool with calmer pacing.\n>\n> **6.** Advocacy stage and final message.",
     "editorialGuardrails": "Avoid diagnosing beyond public statements. Include appropriate\ncrisis-resource language if the finished post directly discusses\nsuicidal thoughts.",
     "sourceId": "RS-C005",
+    "pattern": "Mental health crisis, recovery,",
     "audienceMoments": [
       "MOMENT Mental health crisis, recovery, Success has not protected me from renewed purpose struggling. ----------------------------------- ----------------------------------- RECOGNITION CORE EMOTION"
     ],
@@ -3756,7 +3764,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "peyton-manning",
@@ -3778,6 +3786,7 @@ export const importedStories: StoryRecord[] = [
     "carouselAuthored": "-----------------------------------------------------------------------\n  SLIDE                               COPY\n  ----------------------------------- -----------------------------------\n  1                                   The career looked finished.\n\n  2                                   A neck injury cost Peyton Manning\n                                      an entire season.\n\n  3                                   The only NFL team he had known\n                                      released him.\n\n  4                                   He could not return as the exact\n                                      player he had been.\n\n  5                                   So he adapted how he prepared,\n                                      anticipated, and won.\n\n  6                                   He reached two more Super Bowls and\n                                      retired a champion.\n\n  7                                   THE REELSPIRATION: Your purpose can\n                                      survive the loss of your old\n                                      method.\n  -----------------------------------------------------------------------\n\n**SIX-SCENE VISUAL STORYBOARD**\n\n> **1.** Quarterback studying film in an empty room.\n>\n> **2.** Medical imagery and a helmet placed aside.\n>\n> **3.** Release announcement shown through abstract headlines.\n>\n> **4.** Rehabilitation and careful throwing motion.\n>\n> **5.** Denver-inspired stadium without protected branding.\n>\n> **6.** Final huddle and quiet walk away.",
     "editorialGuardrails": "Avoid medical claims not supported by public records. Respect NFL\nfootage and trademarks.",
     "sourceId": "RS-C006",
+    "pattern": "Career-threatening injury,",
     "audienceMoments": [
       "MOMENT Career-threatening injury, The method that made me release, adaptation successful no longer works. ----------------------------------- ----------------------------------- RECOGNITION CORE EMOTION"
     ],
@@ -3800,7 +3809,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "drew-barrymore",
@@ -3822,6 +3831,7 @@ export const importedStories: StoryRecord[] = [
     "carouselAuthored": "-----------------------------------------------------------------------\n  SLIDE                               COPY\n  ----------------------------------- -----------------------------------\n  1                                   She became famous before she\n                                      understood fame.\n\n  2                                   Drew Barrymore's childhood success\n                                      came without stability.\n\n  3                                   Addiction, treatment, and family\n                                      chaos became public.\n\n  4                                   She could not rewrite her\n                                      childhood.\n\n  5                                   She could build a different\n                                      adulthood.\n\n  6                                   Barrymore became an actor,\n                                      producer, entrepreneur, and host.\n\n  7                                   THE REELSPIRATION: Your beginning\n                                      can explain you without owning your\n                                      ending.\n  -----------------------------------------------------------------------\n\n**SIX-SCENE VISUAL STORYBOARD**\n\n> **1.** Child-star silhouette facing a massive camera light.\n>\n> **2.** Empty party aftermath represented symbolically.\n>\n> **3.** Court papers and a small apartment key.\n>\n> **4.** Young adult arriving early to a set.\n>\n> **5.** Producer's chair, business meeting, television stage.\n>\n> **6.** Warm studio audience and final card.",
     "editorialGuardrails": "Use verified first-person accounts. Do not imply emancipation alone\nsolved complex issues. Respect child-safety standards.",
     "sourceId": "RS-C007",
+    "pattern": "Child fame, addiction,",
     "audienceMoments": [
       "MOMENT Child fame, addiction, My early life was chaotic and I emancipation, reinvention want a different adulthood. ----------------------------------- ----------------------------------- RECOGNITION CORE EMOTION"
     ],
@@ -3844,14 +3854,14 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "brendan-fraser",
     "subject": "Brendan Fraser",
     "dek": "The Return of a Beloved Star",
     "challenges": [
-      "starting-over"
+      "recovering"
     ],
     "collections": [
       "greatest-comebacks"
@@ -3866,6 +3876,7 @@ export const importedStories: StoryRecord[] = [
     "carouselAuthored": "-----------------------------------------------------------------------\n  SLIDE                               COPY\n  ----------------------------------- -----------------------------------\n  1                                   The world remembered the star. It\n                                      did not always see the struggle.\n\n  2                                   Brendan Fraser's physical roles\n                                      contributed to serious injuries.\n\n  3                                   Personal hardship and career\n                                      disruption kept him away from the\n                                      spotlight.\n\n  4                                   He continued working without\n                                      guaranteed attention.\n\n  5                                   His return required\n                                      vulnerability---not imitation of\n                                      his old image.\n\n  6                                   The Whale earned him the Academy\n                                      Award for Best Actor.\n\n  7                                   THE REELSPIRATION: You are not\n                                      finished because the room stopped\n                                      looking.\n  -----------------------------------------------------------------------\n\n**SIX-SCENE VISUAL STORYBOARD**\n\n> **1.** Old movie marquee fading after closing time.\n>\n> **2.** Body-care and surgery-recovery imagery, non-graphic.\n>\n> **3.** Quiet audition room with one chair.\n>\n> **4.** Script pages and close emotional preparation.\n>\n> **5.** Standing ovation represented with light and sound.\n>\n> **6.** Award silhouette and final card.",
     "editorialGuardrails": "Treat private allegations and health history carefully. Use only public,\nsourced details. Do not reproduce film footage without rights.",
     "sourceId": "RS-C008",
+    "pattern": "Injury, personal hardship, career I feel forgotten after years of",
     "audienceMoments": [
       "Hollywood abandoned him"
     ],
@@ -3888,7 +3899,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "monica-seles",
@@ -3910,6 +3921,7 @@ export const importedStories: StoryRecord[] = [
     "carouselAuthored": "-----------------------------------------------------------------------\n  SLIDE                               COPY\n  ----------------------------------- -----------------------------------\n  1                                   She was No. 1 in the world when\n                                      violence stopped her career.\n\n  2                                   Monica Seles was attacked during a\n                                      match in 1993.\n\n  3                                   The wound was physical. The trauma\n                                      reached much further.\n\n  4                                   The public wanted a comeback.\n                                      Recovery followed her timetable.\n\n  5                                   She returned more than two years\n                                      later.\n\n  6                                   She won her first tournament back.\n\n  7                                   THE REELSPIRATION: Courage is\n                                      reclaiming what you can without\n                                      pretending nothing changed.\n  -----------------------------------------------------------------------\n\n**SIX-SCENE VISUAL STORYBOARD**\n\n> **1.** Fast tennis exchanges and scoreboard at No. 1.\n>\n> **2.** Crowd sound abruptly cuts; avoid depicting attack.\n>\n> **3.** Empty court and racket on a bench.\n>\n> **4.** Therapy, walking, and gradual training represented\n> symbolically.\n>\n> **5.** Return through tunnel to applause.\n>\n> **6.** First trophy back and quiet reflection.",
     "editorialGuardrails": "Avoid graphic details and \"everything happens for a reason\" language.\nVerify event and return dates through WTA/tennis records.",
     "sourceId": "RS-C009",
+    "pattern": "Trauma, interruption, return to",
     "audienceMoments": [
       "everything happens for a reason"
     ],
@@ -3932,7 +3944,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "magic-johnson",
@@ -3955,6 +3967,7 @@ export const importedStories: StoryRecord[] = [
     "carouselAuthored": "-----------------------------------------------------------------------\n  SLIDE                               COPY\n  ----------------------------------- -----------------------------------\n  1                                   One announcement changed\n                                      basketball---and public\n                                      understanding of HIV.\n\n  2                                   Magic Johnson was one of the NBA's\n                                      brightest stars.\n\n  3                                   In 1991, he announced that he was\n                                      living with HIV.\n\n  4                                   Fear and stigma surrounded the\n                                      diagnosis.\n\n  5                                   Johnson chose visibility,\n                                      treatment, and education.\n\n  6                                   He continued building a life in\n                                      advocacy, business, and public\n                                      service.\n\n  7                                   THE REELSPIRATION: A diagnosis can\n                                      change the plan without erasing\n                                      your purpose.\n  -----------------------------------------------------------------------\n\n**SIX-SCENE VISUAL STORYBOARD**\n\n> **1.** Showtime-era basketball energy using licensed or symbolic\n> footage.\n>\n> **2.** Press-conference microphones and silence.\n>\n> **3.** Public-health posters and misinformation fading away.\n>\n> **4.** Medical consultation and treatment routine.\n>\n> **5.** Community education and business leadership.\n>\n> **6.** Smiling family/public appearance and final card.",
     "editorialGuardrails": "Do not imply one person's treatment outcome predicts another's. Include\nmedical-source review and current terminology.",
     "sourceId": "RS-C010",
+    "pattern": "Life-changing diagnosis, public",
     "audienceMoments": [
       "MOMENT Life-changing diagnosis, public A diagnosis has changed how I see courage, advocacy my future. ----------------------------------- ----------------------------------- RECOGNITION CORE EMOTION"
     ],
@@ -3977,7 +3990,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "apollo-13",
@@ -3999,6 +4012,7 @@ export const importedStories: StoryRecord[] = [
     "carouselAuthored": "-----------------------------------------------------------------------\n  SLIDE                               COPY\n  ----------------------------------- -----------------------------------\n  1                                   An oxygen-tank explosion turned a\n                                      lunar mission into a fight to bring\n                                      three astronauts home.\n\n  2                                   Apollo 13 launched in April 1970\n                                      with the goal of landing on the\n                                      Moon. The crew, flight controllers,\n                                      engineers, and contractors had\n                                      rehearsed countless problems---but\n                                      not the exact chain of failures\n                                      that followed.\n\n  3                                   The explosion damaged the\n                                      spacecraft, forced the Moon landing\n                                      to be abandoned, and left limited\n                                      power, water, and life-support\n                                      capacity. Small errors could become\n                                      fatal.\n\n  4                                   NASA and the crew converted the\n                                      lunar module into a lifeboat,\n                                      improvised carbon-dioxide\n                                      filtration, rationed resources, and\n                                      solved one problem after another\n                                      through disciplined communication.\n\n  5                                   Jim Lovell, Jack Swigert, and Fred\n                                      Haise returned safely to Earth.\n\n  6                                   When the mission changes,\n                                      leadership means changing the\n                                      definition of success before pride\n                                      makes the decision for you.\n\n  7                                   Clear roles, honest data, and calm\n                                      collaboration turn panic into\n                                      solvable problems.\n  -----------------------------------------------------------------------\n\n**SIX-SCENE VISUAL STORYBOARD**\n\n> **1.** Open with the instantly recognizable symbol or setting of\n> Apollo 13.\n>\n> **2.** Establish the people and the stakes before the crisis.\n>\n> **3.** Show the central failure, threat, or impossible constraint\n> without sensationalism.\n>\n> **4.** Focus on the key decision and coordinated action.\n>\n> **5.** Reveal the outcome and the human cost or relief.\n>\n> **6.** End on the Reelspiration line with clean branded typography.",
     "editorialGuardrails": "Verify all dates, quotations, casualty figures, and rights before\npublication.",
     "sourceId": "RS-T001",
+    "pattern": "Crisis teamwork",
     "audienceMoments": [
       "MOMENT Crisis teamwork Our plan has failed and we need to improvise. ----------------------------------- ----------------------------------- RECOGNITION CORE EMOTION"
     ],
@@ -4021,7 +4035,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "published",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "miracle-on-the-hudson",
@@ -4043,6 +4057,7 @@ export const importedStories: StoryRecord[] = [
     "carouselAuthored": "-----------------------------------------------------------------------\n  SLIDE                               COPY\n  ----------------------------------- -----------------------------------\n  1                                   US Airways Flight 1549 lost thrust\n                                      in both engines shortly after\n                                      takeoff. Captain Chesley\n                                      Sullenberger had only minutes to\n                                      decide where 155 people would land.\n\n  2                                   On January 15, 2009, the Airbus\n                                      A320 struck a flock of birds after\n                                      departing LaGuardia Airport.\n\n  3                                   The aircraft was too low for a\n                                      normal recovery. Every option\n                                      carried risk, and the decision\n                                      window was measured in seconds.\n\n  4                                   Sullenberger and First Officer\n                                      Jeffrey Skiles followed procedures,\n                                      assessed alternatives, communicated\n                                      clearly, and ditched the aircraft\n                                      in the Hudson River. Flight\n                                      attendants, passengers, ferry\n                                      crews, and first responders\n                                      completed the rescue.\n\n  5                                   All 155 people aboard survived.\n\n  6                                   In a crisis, calm is not the\n                                      absence of fear. It is the\n                                      discipline to keep using what you\n                                      know.\n\n  7                                   Preparation becomes courage when\n                                      the time to think becomes very\n                                      small.\n  -----------------------------------------------------------------------\n\n**SIX-SCENE VISUAL STORYBOARD**\n\n> **1.** Open with the instantly recognizable symbol or setting of\n> Miracle on the Hudson.\n>\n> **2.** Establish the people and the stakes before the crisis.\n>\n> **3.** Show the central failure, threat, or impossible constraint\n> without sensationalism.\n>\n> **4.** Focus on the key decision and coordinated action.\n>\n> **5.** Reveal the outcome and the human cost or relief.\n>\n> **6.** End on the Reelspiration line with clean branded typography.",
     "editorialGuardrails": "Verify all dates, quotations, casualty figures, and rights before\npublication.",
     "sourceId": "RS-T002",
+    "pattern": "Emergency judgment",
     "audienceMoments": [
       "MOMENT Emergency judgment I have almost no time and no perfect option. ----------------------------------- ----------------------------------- RECOGNITION CORE EMOTION"
     ],
@@ -4065,7 +4080,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "the-33-chilean-miners",
@@ -4087,6 +4102,7 @@ export const importedStories: StoryRecord[] = [
     "carouselAuthored": "-----------------------------------------------------------------------\n  SLIDE                               COPY\n  ----------------------------------- -----------------------------------\n  1                                   Thirty-three miners were trapped\n                                      nearly half a mile\n                                      underground---and the world did not\n                                      know for seventeen days whether\n                                      they were alive.\n\n  2                                   The 2010 collapse at the San José\n                                      mine in Chile cut off the miners\n                                      from the surface.\n\n  3                                   Food was scarce, heat was intense,\n                                      and rescue access was uncertain.\n                                      Survival required discipline below\n                                      ground and engineering cooperation\n                                      above it.\n\n  4                                   The miners rationed supplies,\n                                      organized roles, and maintained\n                                      order. International teams drilled\n                                      multiple rescue paths while\n                                      families and officials sustained\n                                      pressure and hope.\n\n  5                                   After sixty-nine days underground,\n                                      all thirty-three miners were\n                                      brought to the surface.\n\n  6                                   When you cannot see the exit, build\n                                      the routines that help you survive\n                                      long enough to reach it.\n\n  7                                   Hope becomes practical when people\n                                      give it roles, schedules, and\n                                      shared responsibility.\n  -----------------------------------------------------------------------\n\n**SIX-SCENE VISUAL STORYBOARD**\n\n> **1.** Open with the instantly recognizable symbol or setting of The\n> 33 Chilean Miners.\n>\n> **2.** Establish the people and the stakes before the crisis.\n>\n> **3.** Show the central failure, threat, or impossible constraint\n> without sensationalism.\n>\n> **4.** Focus on the key decision and coordinated action.\n>\n> **5.** Reveal the outcome and the human cost or relief.\n>\n> **6.** End on the Reelspiration line with clean branded typography.",
     "editorialGuardrails": "Verify all dates, quotations, casualty figures, and rights before\npublication.",
     "sourceId": "RS-T003",
+    "pattern": "Collective endurance",
     "audienceMoments": [
       "MOMENT Collective endurance I cannot see the end of this crisis. ----------------------------------- ----------------------------------- RECOGNITION CORE EMOTION"
     ],
@@ -4109,7 +4125,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "thai-cave-rescue",
@@ -4131,6 +4147,7 @@ export const importedStories: StoryRecord[] = [
     "carouselAuthored": "-----------------------------------------------------------------------\n  SLIDE                               COPY\n  ----------------------------------- -----------------------------------\n  1                                   Twelve boys and their coach were\n                                      trapped deep inside a flooded cave.\n                                      Reaching them was difficult.\n                                      Bringing them out appeared almost\n                                      impossible.\n\n  2                                   In 2018, the Wild Boars soccer team\n                                      entered Thailand's Tham Luang cave\n                                      and became trapped by rising water.\n\n  3                                   Narrow flooded passages, low\n                                      visibility, oxygen concerns,\n                                      weather, and the children's lack of\n                                      diving experience created\n                                      extraordinary risk.\n\n  4                                   Thai authorities coordinated cave\n                                      divers, military personnel,\n                                      engineers, doctors, volunteers,\n                                      farmers, and international\n                                      specialists. The rescue plan\n                                      combined expertise no single\n                                      organization possessed.\n\n  5                                   All thirteen were rescued, though\n                                      former Thai Navy SEAL Saman Kunan\n                                      died during the operation and\n                                      Beirut Pakbara later died from an\n                                      infection contracted during the\n                                      rescue.\n\n  6                                   The biggest problems are often\n                                      solved when expertise stops\n                                      competing and starts connecting.\n\n  7                                   Coordination is a form of courage.\n  -----------------------------------------------------------------------\n\n**SIX-SCENE VISUAL STORYBOARD**\n\n> **1.** Open with the instantly recognizable symbol or setting of Thai\n> Cave Rescue.\n>\n> **2.** Establish the people and the stakes before the crisis.\n>\n> **3.** Show the central failure, threat, or impossible constraint\n> without sensationalism.\n>\n> **4.** Focus on the key decision and coordinated action.\n>\n> **5.** Reveal the outcome and the human cost or relief.\n>\n> **6.** End on the Reelspiration line with clean branded typography.",
     "editorialGuardrails": "Honor the rescuers who died. Avoid presenting the outcome as risk-free\nor inevitable.",
     "sourceId": "RS-T004",
+    "pattern": "Global rescue coordination",
     "audienceMoments": [
       "MOMENT Global rescue coordination The problem is bigger than any one expert. ----------------------------------- ----------------------------------- RECOGNITION CORE EMOTION"
     ],
@@ -4153,7 +4170,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "1980-u-s-olympic-hockey-team",
@@ -4175,6 +4192,7 @@ export const importedStories: StoryRecord[] = [
     "carouselAuthored": "-----------------------------------------------------------------------\n  SLIDE                               COPY\n  ----------------------------------- -----------------------------------\n  1                                   A group of American college players\n                                      faced a Soviet team considered the\n                                      best in the world.\n\n  2                                   At the 1980 Winter Olympics in Lake\n                                      Placid, the Soviet Union entered as\n                                      the dominant international hockey\n                                      power.\n\n  3                                   The Americans were younger, less\n                                      experienced, and widely expected to\n                                      lose.\n\n  4                                   Coach Herb Brooks built\n                                      conditioning, role clarity, and a\n                                      team identity stronger than\n                                      individual status. The players\n                                      stayed within the system and kept\n                                      the game close.\n\n  5                                   The United States defeated the\n                                      Soviet Union 4--3 and then beat\n                                      Finland to win gold.\n\n  6                                   Belief matters most when it has\n                                      been trained into the body before\n                                      the pressure arrives.\n\n  7                                   Underdogs become dangerous when\n                                      everyone understands the role they\n                                      must execute.\n  -----------------------------------------------------------------------\n\n**SIX-SCENE VISUAL STORYBOARD**\n\n> **1.** Open with the instantly recognizable symbol or setting of 1980\n> U.S. Olympic Hockey Team.\n>\n> **2.** Establish the people and the stakes before the crisis.\n>\n> **3.** Show the central failure, threat, or impossible constraint\n> without sensationalism.\n>\n> **4.** Focus on the key decision and coordinated action.\n>\n> **5.** Reveal the outcome and the human cost or relief.\n>\n> **6.** End on the Reelspiration line with clean branded typography.",
     "editorialGuardrails": "Verify all dates, quotations, casualty figures, and rights before\npublication.",
     "sourceId": "RS-T005",
+    "pattern": "Underdog team",
     "audienceMoments": [
       "Miracle on Ice"
     ],
@@ -4197,7 +4215,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "apollo-11",
@@ -4219,6 +4237,7 @@ export const importedStories: StoryRecord[] = [
     "carouselAuthored": "-----------------------------------------------------------------------\n  SLIDE                               COPY\n  ----------------------------------- -----------------------------------\n  1                                   More than 400,000 people\n                                      contributed to the mission\n                                      remembered through the footprints\n                                      of two astronauts.\n\n  2                                   Apollo 11 carried Neil Armstrong,\n                                      Buzz Aldrin, and Michael Collins\n                                      toward the first crewed Moon\n                                      landing in 1969.\n\n  3                                   The mission required advances in\n                                      computing, navigation,\n                                      manufacturing, training,\n                                      communications, medicine, and\n                                      countless other fields.\n\n  4                                   Teams across NASA, universities,\n                                      contractors, and government solved\n                                      problems over years. During\n                                      descent, Armstrong and Aldrin\n                                      responded to computer alarms and\n                                      limited fuel while mission control\n                                      supported the landing.\n\n  5                                   Armstrong and Aldrin walked on the\n                                      Moon while Collins remained in\n                                      lunar orbit, and the crew returned\n                                      safely.\n\n  6                                   Your work does not have to be\n                                      famous to be part of something\n                                      historic.\n\n  7                                   Great missions depend on people who\n                                      take small responsibilities\n                                      seriously.\n  -----------------------------------------------------------------------\n\n**SIX-SCENE VISUAL STORYBOARD**\n\n> **1.** Open with the instantly recognizable symbol or setting of\n> Apollo 11.\n>\n> **2.** Establish the people and the stakes before the crisis.\n>\n> **3.** Show the central failure, threat, or impossible constraint\n> without sensationalism.\n>\n> **4.** Focus on the key decision and coordinated action.\n>\n> **5.** Reveal the outcome and the human cost or relief.\n>\n> **6.** End on the Reelspiration line with clean branded typography.",
     "editorialGuardrails": "Verify all dates, quotations, casualty figures, and rights before\npublication.",
     "sourceId": "RS-T006",
+    "pattern": "Mission scale",
     "audienceMoments": [
       "MOMENT Mission scale My contribution feels small inside a huge project. ----------------------------------- ----------------------------------- RECOGNITION CORE EMOTION"
     ],
@@ -4241,7 +4260,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "dunkirk-evacuation",
@@ -4263,6 +4282,7 @@ export const importedStories: StoryRecord[] = [
     "carouselAuthored": "-----------------------------------------------------------------------\n  SLIDE                               COPY\n  ----------------------------------- -----------------------------------\n  1                                   Hundreds of thousands of Allied\n                                      troops were trapped near Dunkirk as\n                                      German forces advanced.\n\n  2                                   In May 1940, British, French,\n                                      Belgian, and other Allied troops\n                                      were cut off along the coast of\n                                      northern France.\n\n  3                                   A military defeat threatened to\n                                      become a catastrophic loss of\n                                      personnel. Ports were damaged, time\n                                      was short, and evacuation routes\n                                      were under attack.\n\n  4                                   Naval vessels and a varied fleet of\n                                      civilian \"little ships\" helped\n                                      evacuate troops across the English\n                                      Channel while soldiers and air\n                                      forces fought to protect the\n                                      operation.\n\n  5                                   More than 330,000 Allied troops\n                                      were evacuated, allowing Britain\n                                      and its allies to continue the war.\n\n  6                                   There is no shame in changing the\n                                      objective when saving people\n                                      becomes the objective.\n\n  7                                   Strategic retreat is not surrender\n                                      when it protects the capacity to\n                                      continue.\n  -----------------------------------------------------------------------\n\n**SIX-SCENE VISUAL STORYBOARD**\n\n> **1.** Open with the instantly recognizable symbol or setting of\n> Dunkirk Evacuation.\n>\n> **2.** Establish the people and the stakes before the crisis.\n>\n> **3.** Show the central failure, threat, or impossible constraint\n> without sensationalism.\n>\n> **4.** Focus on the key decision and coordinated action.\n>\n> **5.** Reveal the outcome and the human cost or relief.\n>\n> **6.** End on the Reelspiration line with clean branded typography.",
     "editorialGuardrails": "Verify all dates, quotations, casualty figures, and rights before\npublication.",
     "sourceId": "RS-T007",
+    "pattern": "Retreat and rescue",
     "audienceMoments": [
       "little ships"
     ],
@@ -4285,7 +4305,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "berlin-airlift",
@@ -4307,6 +4327,7 @@ export const importedStories: StoryRecord[] = [
     "carouselAuthored": "-----------------------------------------------------------------------\n  SLIDE                               COPY\n  ----------------------------------- -----------------------------------\n  1                                   When the Soviet Union blocked land\n                                      access to West Berlin, Allied\n                                      aircraft began supplying an entire\n                                      city by air.\n\n  2                                   In 1948, ground routes into the\n                                      western sectors of Berlin were cut\n                                      off amid rising Cold War tension.\n\n  3                                   Millions of residents needed food,\n                                      coal, medicine, and essential\n                                      goods. A military confrontation\n                                      risked a wider war.\n\n  4                                   The United States, United Kingdom,\n                                      and allies created a relentless\n                                      air-transport system, improving\n                                      schedules, unloading, maintenance,\n                                      and runway operations until planes\n                                      arrived at extraordinary frequency.\n\n  5                                   The blockade ended in 1949 after\n                                      the airlift demonstrated that the\n                                      city could be sustained.\n\n  6                                   Consistency can become courage when\n                                      people depend on you to keep\n                                      showing up.\n\n  7                                   Systems defeat crises that heroics\n                                      alone cannot sustain.\n  -----------------------------------------------------------------------\n\n**SIX-SCENE VISUAL STORYBOARD**\n\n> **1.** Open with the instantly recognizable symbol or setting of\n> Berlin Airlift.\n>\n> **2.** Establish the people and the stakes before the crisis.\n>\n> **3.** Show the central failure, threat, or impossible constraint\n> without sensationalism.\n>\n> **4.** Focus on the key decision and coordinated action.\n>\n> **5.** Reveal the outcome and the human cost or relief.\n>\n> **6.** End on the Reelspiration line with clean branded typography.",
     "editorialGuardrails": "Verify all dates, quotations, casualty figures, and rights before\npublication.",
     "sourceId": "RS-T008",
+    "pattern": "Sustained logistics",
     "audienceMoments": [
       "MOMENT Sustained logistics The crisis will not be solved by one dramatic act. ----------------------------------- ----------------------------------- RECOGNITION CORE EMOTION"
     ],
@@ -4329,7 +4350,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "endurance-expedition",
@@ -4351,6 +4372,7 @@ export const importedStories: StoryRecord[] = [
     "carouselAuthored": "-----------------------------------------------------------------------\n  SLIDE                               COPY\n  ----------------------------------- -----------------------------------\n  1                                   Ernest Shackleton's ship was\n                                      crushed by Antarctic ice. The\n                                      expedition failed---but every\n                                      member of his party survived.\n\n  2                                   The Endurance expedition set out in\n                                      1914 to cross Antarctica. The ship\n                                      became trapped in sea ice before\n                                      reaching the continent.\n\n  3                                   Months of drifting, the destruction\n                                      of the ship, open-boat travel,\n                                      cold, hunger, and isolation turned\n                                      exploration into survival.\n\n  4                                   Shackleton maintained routines,\n                                      monitored morale, redistributed\n                                      risk, and eventually led a small\n                                      party across dangerous seas and\n                                      mountains to reach help.\n\n  5                                   After repeated rescue attempts, all\n                                      members of the Endurance party were\n                                      brought home.\n\n  6                                   When the mission fails,\n                                      responsibility remains.\n\n  7                                   Morale is an operational resource,\n                                      not a luxury.\n  -----------------------------------------------------------------------\n\n**SIX-SCENE VISUAL STORYBOARD**\n\n> **1.** Open with the instantly recognizable symbol or setting of\n> Endurance Expedition.\n>\n> **2.** Establish the people and the stakes before the crisis.\n>\n> **3.** Show the central failure, threat, or impossible constraint\n> without sensationalism.\n>\n> **4.** Focus on the key decision and coordinated action.\n>\n> **5.** Reveal the outcome and the human cost or relief.\n>\n> **6.** End on the Reelspiration line with clean branded typography.",
     "editorialGuardrails": "Verify all dates, quotations, casualty figures, and rights before\npublication.",
     "sourceId": "RS-T009",
+    "pattern": "Leadership in catastrophe",
     "audienceMoments": [
       "MOMENT Leadership in catastrophe The goal is gone; I still owe people leadership. ----------------------------------- ----------------------------------- RECOGNITION CORE EMOTION"
     ],
@@ -4373,7 +4395,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "doolittle-raid",
@@ -4395,6 +4417,7 @@ export const importedStories: StoryRecord[] = [
     "carouselAuthored": "-----------------------------------------------------------------------\n  SLIDE                               COPY\n  ----------------------------------- -----------------------------------\n  1                                   Only months after Pearl Harbor,\n                                      American crews launched bombers\n                                      from an aircraft carrier on a\n                                      mission from which none could\n                                      return to the carrier.\n\n  2                                   The United States entered 1942\n                                      after a series of devastating\n                                      defeats in the Pacific.\n\n  3                                   The planned strike on Japan\n                                      required B-25 bombers to launch\n                                      from the USS Hornet, continue to\n                                      China, and accept severe\n                                      uncertainty about fuel and landing.\n\n  4                                   Lieutenant Colonel James Doolittle\n                                      and sixteen crews launched earlier\n                                      than planned after being detected.\n                                      They struck targets and continued\n                                      toward China.\n\n  5                                   The material damage was limited,\n                                      but the raid raised American morale\n                                      and affected Japanese strategic\n                                      decisions. Many Chinese civilians\n                                      later suffered brutal reprisals\n                                      connected to assistance given to\n                                      the raiders.\n\n  6                                   Courage without historical context\n                                      becomes mythology. Courage with\n                                      context becomes responsibility.\n\n  7                                   Morale can change what people\n                                      believe is possible, but leaders\n                                      must remember who bears the\n                                      consequences.\n  -----------------------------------------------------------------------\n\n**SIX-SCENE VISUAL STORYBOARD**\n\n> **1.** Open with the instantly recognizable symbol or setting of\n> Doolittle Raid.\n>\n> **2.** Establish the people and the stakes before the crisis.\n>\n> **3.** Show the central failure, threat, or impossible constraint\n> without sensationalism.\n>\n> **4.** Focus on the key decision and coordinated action.\n>\n> **5.** Reveal the outcome and the human cost or relief.\n>\n> **6.** End on the Reelspiration line with clean branded typography.",
     "editorialGuardrails": "Do not omit Chinese civilian suffering or present bombing as\nconsequence-free.",
     "sourceId": "RS-T010",
+    "pattern": "High-risk mission",
     "audienceMoments": [
       "MOMENT High-risk mission We need proof that the enemy is not untouchable. ----------------------------------- ----------------------------------- RECOGNITION CORE EMOTION"
     ],
@@ -4417,7 +4440,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "henry-ford",
@@ -4440,6 +4463,7 @@ export const importedStories: StoryRecord[] = [
     "carouselAuthored": "-----------------------------------------------------------------------\n  SLIDE                               COPY\n  ----------------------------------- -----------------------------------\n  1                                   Before Ford Motor Company\n                                      succeeded, Henry Ford's first\n                                      automobile company failed.\n\n  2                                   Ford worked as an engineer while\n                                      experimenting with gasoline-powered\n                                      vehicles and attracting investors.\n\n  3                                   His first venture, the Detroit\n                                      Automobile Company, struggled with\n                                      cost and product problems and was\n                                      dissolved. A second effort also\n                                      ended after conflict with\n                                      investors.\n\n  4                                   Ford kept refining manufacturing\n                                      ideas and eventually founded Ford\n                                      Motor Company in 1903 with a\n                                      clearer product and operating\n                                      model.\n\n  5                                   The Model T and moving assembly\n                                      line helped transform automobile\n                                      manufacturing and mass mobility.\n\n  6                                   Do not waste a failed attempt by\n                                      refusing to study what it taught\n                                      you.\n\n  7                                   Iteration applies to companies, not\n                                      only products.\n  -----------------------------------------------------------------------\n\n**SIX-SCENE VISUAL STORYBOARD**\n\n> **1.** Open with the instantly recognizable symbol or setting of Henry\n> Ford.\n>\n> **2.** Establish the people and the stakes before the crisis.\n>\n> **3.** Show the central failure, threat, or impossible constraint\n> without sensationalism.\n>\n> **4.** Focus on the key decision and coordinated action.\n>\n> **5.** Reveal the outcome and the human cost or relief.\n>\n> **6.** End on the Reelspiration line with clean branded typography.",
     "editorialGuardrails": "Include Ford's antisemitism and labor controversies in long-form website\ncontext; do not turn industrial achievement into blanket moral\nendorsement.",
     "sourceId": "RS-E001",
+    "pattern": "Business failure and iteration",
     "audienceMoments": [
       "MOMENT Business failure and iteration My first company did not work. ----------------------------------- ----------------------------------- RECOGNITION CORE EMOTION Global / high Persistence"
     ],
@@ -4462,7 +4486,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "published",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "sam-walton",
@@ -4485,6 +4509,7 @@ export const importedStories: StoryRecord[] = [
     "carouselAuthored": "-----------------------------------------------------------------------\n  SLIDE                               COPY\n  ----------------------------------- -----------------------------------\n  1                                   Sam Walton built a successful\n                                      variety store---then lost the lease\n                                      and had to leave it behind.\n\n  2                                   After military service, Walton\n                                      operated a Ben Franklin franchise\n                                      in Newport, Arkansas, where he\n                                      experimented with pricing,\n                                      merchandising, and volume.\n\n  3                                   The store became successful, but\n                                      Walton's lease was not renewed. He\n                                      had to sell the business and\n                                      relocate.\n\n  4                                   Instead of treating the loss as\n                                      wasted time, Walton carried the\n                                      operating lessons to Bentonville\n                                      and continued refining discount\n                                      retail in smaller communities.\n\n  5                                   The approach eventually became\n                                      Walmart, one of the world's largest\n                                      retailers.\n\n  6                                   Assets can disappear. Learned\n                                      systems can travel.\n\n  7                                   He chose to carry the model forward\n                                      instead of remaining attached to\n                                      the first store.\n  -----------------------------------------------------------------------\n\n**SIX-SCENE VISUAL STORYBOARD**\n\n> **1.** Open with the instantly recognizable symbol or setting of Sam\n> Walton.\n>\n> **2.** Establish the people and the stakes before the crisis.\n>\n> **3.** Show the central failure, threat, or impossible constraint\n> without sensationalism.\n>\n> **4.** Focus on the key decision and coordinated action.\n>\n> **5.** Reveal the outcome and the human cost or relief.\n>\n> **6.** End on the Reelspiration line with clean branded typography.",
     "editorialGuardrails": "Verify all dates, quotations, casualty figures, and rights before\npublication.",
     "sourceId": "RS-E002",
+    "pattern": "Lost business, rebuilt model",
     "audienceMoments": [
       "MOMENT Lost business, rebuilt model I lost what I built and have to begin again. ----------------------------------- ----------------------------------- RECOGNITION CORE EMOTION"
     ],
@@ -4855,7 +4880,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "jeff-bezos",
@@ -4878,6 +4903,7 @@ export const importedStories: StoryRecord[] = [
     "carouselAuthored": "-----------------------------------------------------------------------\n  SLIDE                               COPY\n  ----------------------------------- -----------------------------------\n  1                                   Amazon began as an online bookstore\n                                      inside a market many people did not\n                                      yet trust.\n\n  2                                   In 1994, Jeff Bezos left a\n                                      successful finance career to pursue\n                                      internet commerce.\n\n  3                                   Online shopping was unfamiliar,\n                                      infrastructure was limited, and\n                                      profitability would require years\n                                      of reinvestment and\n                                      experimentation.\n\n  4                                   Bezos started with books because\n                                      the category offered enormous\n                                      selection, then expanded\n                                      capabilities in logistics, cloud\n                                      computing, devices, and\n                                      marketplaces.\n\n  5                                   Amazon became one of the world's\n                                      most influential technology and\n                                      retail companies.\n\n  6                                   You do not need to start with\n                                      everything. You need to start with\n                                      the entry point that can become\n                                      more.\n\n  7                                   Long-term thinking requires\n                                      surviving short-term skepticism.\n  -----------------------------------------------------------------------\n\n**SIX-SCENE VISUAL STORYBOARD**\n\n> **1.** Open with the instantly recognizable symbol or setting of Jeff\n> Bezos.\n>\n> **2.** Establish the people and the stakes before the crisis.\n>\n> **3.** Show the central failure, threat, or impossible constraint\n> without sensationalism.\n>\n> **4.** Focus on the key decision and coordinated action.\n>\n> **5.** Reveal the outcome and the human cost or relief.\n>\n> **6.** End on the Reelspiration line with clean branded typography.",
     "editorialGuardrails": "Do not present scale as uncomplicated virtue; acknowledge labor and\ncompetition controversies.",
     "sourceId": "RS-E003",
+    "pattern": "Long horizon and uncertainty",
     "audienceMoments": [
       "MOMENT Long horizon and uncertainty My idea looks too small or too early. ----------------------------------- ----------------------------------- RECOGNITION CORE EMOTION"
     ],
@@ -4900,7 +4926,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "elon-musk",
@@ -4923,6 +4949,7 @@ export const importedStories: StoryRecord[] = [
     "carouselAuthored": "-----------------------------------------------------------------------\n  SLIDE                               COPY\n  ----------------------------------- -----------------------------------\n  1                                   In 2008, Tesla and SpaceX both\n                                      faced severe financial and\n                                      technical pressure.\n\n  2                                   After co-founding and selling\n                                      internet companies, Elon Musk\n                                      invested heavily in electric\n                                      vehicles and private spaceflight.\n\n  3                                   SpaceX suffered three failed\n                                      launches before its first\n                                      successful orbital flight. Tesla\n                                      faced production delays and a cash\n                                      crisis during the global financial\n                                      downturn.\n\n  4                                   A fourth SpaceX launch succeeded,\n                                      NASA awarded a major contract, and\n                                      Tesla secured financing that helped\n                                      it continue.\n\n  5                                   Both companies survived and later\n                                      reshaped expectations in their\n                                      industries.\n\n  6                                   Conviction is not proof you are\n                                      right. It is the willingness to\n                                      keep testing whether you are.\n\n  7                                   High risk must be paired with\n                                      measurable learning.\n  -----------------------------------------------------------------------\n\n**SIX-SCENE VISUAL STORYBOARD**\n\n> **1.** Open with the instantly recognizable symbol or setting of Elon\n> Musk.\n>\n> **2.** Establish the people and the stakes before the crisis.\n>\n> **3.** Show the central failure, threat, or impossible constraint\n> without sensationalism.\n>\n> **4.** Focus on the key decision and coordinated action.\n>\n> **5.** Reveal the outcome and the human cost or relief.\n>\n> **6.** End on the Reelspiration line with clean branded typography.",
     "editorialGuardrails": "Avoid hero worship. Include current controversies only after fresh\nverification; distinguish documented company milestones from founder\nmythology.",
     "sourceId": "RS-E004",
+    "pattern": "Capital risk and technical",
     "audienceMoments": [
       "MOMENT Capital risk and technical My projects are close to failing ambition at the same time. ----------------------------------- ----------------------------------- RECOGNITION CORE EMOTION"
     ],
@@ -4945,7 +4972,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "oprah-winfrey",
@@ -4968,6 +4995,7 @@ export const importedStories: StoryRecord[] = [
     "carouselAuthored": "-----------------------------------------------------------------------\n  SLIDE                               COPY\n  ----------------------------------- -----------------------------------\n  1                                   Oprah Winfrey grew up in poverty,\n                                      endured abuse, and faced early\n                                      professional setbacks before\n                                      building an unprecedented media\n                                      career.\n\n  2                                   Winfrey developed a gift for\n                                      communication and entered\n                                      broadcasting while still young.\n\n  3                                   She experienced discrimination,\n                                      instability, and a highly public\n                                      demotion from a Baltimore\n                                      news-anchor role that did not fit\n                                      her strengths.\n\n  4                                   Daytime talk allowed her empathy\n                                      and conversational style to become\n                                      assets. She eventually gained\n                                      ownership and production control\n                                      rather than remaining only on-air\n                                      talent.\n\n  5                                   The Oprah Winfrey Show became\n                                      globally influential, and Harpo\n                                      Productions expanded her role as\n                                      entrepreneur, producer, and\n                                      philanthropist.\n\n  6                                   The experience that once made you\n                                      feel different may become the\n                                      source of how you connect.\n\n  7                                   Ownership changes influence into\n                                      durable power.\n  -----------------------------------------------------------------------\n\n**SIX-SCENE VISUAL STORYBOARD**\n\n> **1.** Open with the instantly recognizable symbol or setting of Oprah\n> Winfrey.\n>\n> **2.** Establish the people and the stakes before the crisis.\n>\n> **3.** Show the central failure, threat, or impossible constraint\n> without sensationalism.\n>\n> **4.** Focus on the key decision and coordinated action.\n>\n> **5.** Reveal the outcome and the human cost or relief.\n>\n> **6.** End on the Reelspiration line with clean branded typography.",
     "editorialGuardrails": "Verify all dates, quotations, casualty figures, and rights before\npublication.",
     "sourceId": "RS-E005",
+    "pattern": "Trauma and media reinvention",
     "audienceMoments": [
       "MOMENT Trauma and media reinvention My beginning feels incompatible with the future I want. ----------------------------------- ----------------------------------- RECOGNITION CORE EMOTION"
     ],
@@ -4990,7 +5018,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "madam-c-j-walker",
@@ -5013,6 +5041,7 @@ export const importedStories: StoryRecord[] = [
     "carouselAuthored": "-----------------------------------------------------------------------\n  SLIDE                               COPY\n  ----------------------------------- -----------------------------------\n  1                                   Born to formerly enslaved parents,\n                                      Madam C. J. Walker built a\n                                      hair-care business that created\n                                      opportunity for thousands of Black\n                                      women.\n\n  2                                   Walker was orphaned young, worked\n                                      as a laundress, and experienced\n                                      scalp and hair problems shared by\n                                      many women whose needs were\n                                      underserved.\n\n  3                                   She faced poverty, racism, sexism,\n                                      and limited access to capital and\n                                      formal business networks.\n\n  4                                   Walker developed and sold hair-care\n                                      products, trained agents, used\n                                      direct sales, and built a\n                                      community-based distribution model\n                                      that connected income with personal\n                                      care.\n\n  5                                   She became one of the best-known\n                                      Black women entrepreneurs of the\n                                      early twentieth century and\n                                      supported civil-rights and\n                                      philanthropic causes.\n\n  6                                   The strongest businesses often\n                                      begin with respect for a customer\n                                      others failed to see.\n\n  7                                   Economic opportunity can multiply\n                                      when a business teaches others to\n                                      earn.\n  -----------------------------------------------------------------------\n\n**SIX-SCENE VISUAL STORYBOARD**\n\n> **1.** Open with the instantly recognizable symbol or setting of Madam\n> C. J. Walker.\n>\n> **2.** Establish the people and the stakes before the crisis.\n>\n> **3.** Show the central failure, threat, or impossible constraint\n> without sensationalism.\n>\n> **4.** Focus on the key decision and coordinated action.\n>\n> **5.** Reveal the outcome and the human cost or relief.\n>\n> **6.** End on the Reelspiration line with clean branded typography.",
     "editorialGuardrails": "Verify all dates, quotations, casualty figures, and rights before\npublication.",
     "sourceId": "RS-E006",
+    "pattern": "Poverty, discrimination,",
     "audienceMoments": [
       "MOMENT Poverty, discrimination, I do not see products made for self-made enterprise people like me. ----------------------------------- ----------------------------------- RECOGNITION CORE EMOTION"
     ],
@@ -5035,7 +5064,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "richard-branson",
@@ -5058,6 +5087,7 @@ export const importedStories: StoryRecord[] = [
     "carouselAuthored": "-----------------------------------------------------------------------\n  SLIDE                               COPY\n  ----------------------------------- -----------------------------------\n  1                                   Richard Branson struggled in school\n                                      with dyslexia and left at sixteen,\n                                      then built businesses by leaning\n                                      into communication, delegation, and\n                                      bold experimentation.\n\n  2                                   Branson began with a student\n                                      magazine and later entered\n                                      mail-order records and music\n                                      retail.\n\n  3                                   He lacked traditional academic\n                                      credentials and repeatedly entered\n                                      industries where established\n                                      companies had far more resources.\n\n  4                                   Branson built the Virgin brand\n                                      through customer-focused\n                                      positioning, publicity, delegation,\n                                      and a willingness to launch, learn,\n                                      and sometimes exit failed ventures.\n\n  5                                   Virgin expanded across music,\n                                      airlines, telecommunications, and\n                                      other sectors, though not every\n                                      venture succeeded.\n\n  6                                   Stop measuring your future only\n                                      through environments built for\n                                      someone else's strengths.\n\n  7                                   Delegation is not weakness when it\n                                      converts self-awareness into team\n                                      capability.\n  -----------------------------------------------------------------------\n\n**SIX-SCENE VISUAL STORYBOARD**\n\n> **1.** Open with the instantly recognizable symbol or setting of\n> Richard Branson.\n>\n> **2.** Establish the people and the stakes before the crisis.\n>\n> **3.** Show the central failure, threat, or impossible constraint\n> without sensationalism.\n>\n> **4.** Focus on the key decision and coordinated action.\n>\n> **5.** Reveal the outcome and the human cost or relief.\n>\n> **6.** End on the Reelspiration line with clean branded typography.",
     "editorialGuardrails": "Avoid treating dyslexia as a guaranteed entrepreneurial advantage or\nminimizing educational challenges.",
     "sourceId": "RS-E007",
+    "pattern": "Learning difference and",
     "audienceMoments": [
       "MOMENT Learning difference and I do not learn or work the way entrepreneurial experimentation traditional systems expect. ----------------------------------- ----------------------------------- RECOGNITION CORE EMOTION"
     ],
@@ -5080,7 +5110,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "phil-knight",
@@ -5103,6 +5133,7 @@ export const importedStories: StoryRecord[] = [
     "carouselAuthored": "-----------------------------------------------------------------------\n  SLIDE                               COPY\n  ----------------------------------- -----------------------------------\n  1                                   Nike began with Phil Knight selling\n                                      imported running shoes from the\n                                      trunk of his car.\n\n  2                                   Knight wrote a graduate-school\n                                      paper about challenging established\n                                      athletic-shoe companies with\n                                      lower-cost Japanese products.\n\n  3                                   The idea faced limited capital,\n                                      supplier conflict, cash-flow\n                                      pressure, and the difficulty of\n                                      building a brand against entrenched\n                                      competitors.\n\n  4                                   Knight partnered with coach Bill\n                                      Bowerman, listened closely to\n                                      runners, and built Blue Ribbon\n                                      Sports before creating the Nike\n                                      brand and expanding product\n                                      innovation and marketing.\n\n  5                                   Nike became one of the world's most\n                                      recognized sports companies.\n\n  6                                   The first version of distribution\n                                      only needs to get you close enough\n                                      to learn from customers.\n\n  7                                   Customer proximity can compensate\n                                      for a lack of early prestige.\n  -----------------------------------------------------------------------\n\n**SIX-SCENE VISUAL STORYBOARD**\n\n> **1.** Open with the instantly recognizable symbol or setting of Phil\n> Knight.\n>\n> **2.** Establish the people and the stakes before the crisis.\n>\n> **3.** Show the central failure, threat, or impossible constraint\n> without sensationalism.\n>\n> **4.** Focus on the key decision and coordinated action.\n>\n> **5.** Reveal the outcome and the human cost or relief.\n>\n> **6.** End on the Reelspiration line with clean branded typography.",
     "editorialGuardrails": "Include labor and supply-chain history in full website context.",
     "sourceId": "RS-E008",
+    "pattern": "Small start and distribution",
     "audienceMoments": [
       "MOMENT Small start and distribution My beginning looks unimpressive. persistence ----------------------------------- ----------------------------------- RECOGNITION CORE EMOTION"
     ],
@@ -5125,7 +5156,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "ralph-lauren",
@@ -5148,6 +5179,7 @@ export const importedStories: StoryRecord[] = [
     "carouselAuthored": "-----------------------------------------------------------------------\n  SLIDE                               COPY\n  ----------------------------------- -----------------------------------\n  1                                   Ralph Lauren began with a line of\n                                      wide neckties and built an entire\n                                      lifestyle brand around a coherent\n                                      vision.\n\n  2                                   Born Ralph Lifshitz in the Bronx,\n                                      Lauren worked in retail and sales\n                                      before proposing ties that differed\n                                      from prevailing styles.\n\n  3                                   He lacked formal fashion-design\n                                      training and entered an industry\n                                      built around established houses and\n                                      gatekeepers.\n\n  4                                   Lauren treated the product as part\n                                      of a larger world---clothing,\n                                      interiors, aspiration, and\n                                      storytelling---then maintained\n                                      consistency across categories.\n\n  5                                   Polo Ralph Lauren became one of\n                                      fashion's most recognizable global\n                                      brands.\n\n  6                                   A small product can carry a large\n                                      world when the vision remains\n                                      coherent.\n\n  7                                   Brand is repeated meaning, not\n                                      repeated decoration.\n  -----------------------------------------------------------------------\n\n**SIX-SCENE VISUAL STORYBOARD**\n\n> **1.** Open with the instantly recognizable symbol or setting of Ralph\n> Lauren.\n>\n> **2.** Establish the people and the stakes before the crisis.\n>\n> **3.** Show the central failure, threat, or impossible constraint\n> without sensationalism.\n>\n> **4.** Focus on the key decision and coordinated action.\n>\n> **5.** Reveal the outcome and the human cost or relief.\n>\n> **6.** End on the Reelspiration line with clean branded typography.",
     "editorialGuardrails": "Verify all dates, quotations, casualty figures, and rights before\npublication.",
     "sourceId": "RS-E009",
+    "pattern": "Brand building and outsider",
     "audienceMoments": [
       "MOMENT Brand building and outsider My product is small but the world perspective around it could be large. ----------------------------------- ----------------------------------- RECOGNITION CORE EMOTION"
     ],
@@ -5170,7 +5202,7 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   },
   {
     "slug": "est-e-lauder",
@@ -5193,6 +5225,7 @@ export const importedStories: StoryRecord[] = [
     "carouselAuthored": "-----------------------------------------------------------------------\n  SLIDE                               COPY\n  ----------------------------------- -----------------------------------\n  1                                   Estée Lauder built a cosmetics\n                                      company by personally demonstrating\n                                      products and creating reasons for\n                                      customers to try them.\n\n  2                                   Lauder learned about skin-care\n                                      products through her family and\n                                      began selling in beauty salons and\n                                      directly to customers.\n\n  3                                   She faced limited access to major\n                                      retail counters and needed to earn\n                                      trust in a crowded market.\n\n  4                                   Lauder used demonstrations,\n                                      samples, personal selling, and the\n                                      \"gift with purchase\" concept to\n                                      reduce the risk of trying an\n                                      unfamiliar product.\n\n  5                                   The Estée Lauder Companies became a\n                                      global beauty enterprise.\n\n  6                                   Reduce the distance between\n                                      curiosity and proof.\n\n  7                                   Sampling converts belief into\n                                      evidence.\n  -----------------------------------------------------------------------\n\n**SIX-SCENE VISUAL STORYBOARD**\n\n> **1.** Open with the instantly recognizable symbol or setting of Estée\n> Lauder.\n>\n> **2.** Establish the people and the stakes before the crisis.\n>\n> **3.** Show the central failure, threat, or impossible constraint\n> without sensationalism.\n>\n> **4.** Focus on the key decision and coordinated action.\n>\n> **5.** Reveal the outcome and the human cost or relief.\n>\n> **6.** End on the Reelspiration line with clean branded typography.",
     "editorialGuardrails": "Verify all dates, quotations, casualty figures, and rights before\npublication.",
     "sourceId": "RS-E010",
+    "pattern": "Sales persistence and product",
     "audienceMoments": [
       "gift\nwith purchase"
     ],
@@ -5215,6 +5248,6 @@ export const importedStories: StoryRecord[] = [
       }
     ],
     "status": "needs-review",
-    "publishedAt": "2026-08-06"
+    "publishedAt": "2026-08-11"
   }
 ];

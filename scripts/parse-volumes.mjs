@@ -274,10 +274,36 @@ function extractAudienceMoments(blockText) {
   return wrapped ? [wrapped] : [];
 }
 
+function extractTwoColumnField(blockText, label) {
+  // Volume 10 style: a two-column grid table where the label sits at a
+  // fixed column and its value is on the NEXT line at the same column
+  // offset, e.g.
+  //     **PATTERN\                          **AUDIENCE MOMENT\
+  //     **Obsessive preparation             **I want excellence but...
+  const lines = blockText.split("\n");
+  const re = new RegExp(`\\*\\*${label}\\b`, "i");
+  for (let i = 0; i < lines.length; i++) {
+    const m = lines[i].match(re);
+    if (!m) continue;
+    const col = m.index; // column where this label starts
+    const next = lines[i + 1];
+    if (!next) return "";
+    // Take the slice of the next line starting at the same column, and
+    // stop before the next column's content (2+ consecutive spaces).
+    const slice = next.slice(col);
+    const value = slice.split(/\s{2,}/)[0];
+    return stripMd(value).replace(/\s+/g, " ").trim();
+  }
+  return "";
+}
+
 function extractPattern(blockText) {
   const inline = blockText.match(/REELSPIRATION PATTERN\s*\\?\|\s*(.+?)\n/i);
   if (inline) return stripMd(inline[1]);
-  return extractWrappedLabelValue(blockText, "REELSPIRATION", "PATTERN");
+  const wrapped = extractWrappedLabelValue(blockText, "REELSPIRATION", "PATTERN");
+  if (wrapped) return wrapped;
+  // Volume 10 and similar: bare "PATTERN" in a two-column grid table.
+  return extractTwoColumnField(blockText, "PATTERN");
 }
 
 function extractSources(blockText) {

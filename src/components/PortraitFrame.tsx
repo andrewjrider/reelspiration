@@ -152,8 +152,10 @@ function ArchivalPlate({
         </div>
       </div>
 
-      {/* MIDDLE: the name, set as the hero of the composition */}
-      <div className={`relative ${isLarge ? "px-6" : "px-4"} -mt-4`}>
+      {/* MIDDLE: the name, set as the hero of the composition. Vertically
+          centered in the remaining space so the plate reads balanced
+          whether or not the story carries pattern tags below. */}
+      <div className={`relative flex-1 flex flex-col justify-center ${isLarge ? "px-6" : "px-4"}`}>
         <h3
           className={`font-serif text-paper leading-[0.95] ${
             isLarge ? "text-[2.6rem]" : "text-[1.6rem]"
