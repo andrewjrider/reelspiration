@@ -22,6 +22,11 @@ when it does, so nothing here is guesswork you have to wait on me for.
    ready. This preserves the brief's fact-check/approval gate instead of
    dumping raw content onto the live site.
 
+> Current library note: the approved 110-record volume import is activated by
+> `src/data/stories.ts`, which independently derives public availability and
+> verification state. Do not regenerate `imported-stories.ts` merely to change
+> public verification labels or restore source-review stories to the catalog.
+
 ## If your volumes use different field names
 
 They probably will — "person" instead of "subject," "conflict" instead of

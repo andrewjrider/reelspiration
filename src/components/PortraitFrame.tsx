@@ -190,7 +190,7 @@ function ArchivalPlate({
         )}
         <div className="flex items-center justify-between border-t border-line pt-2.5">
           <span className={`font-stamp uppercase tracking-[0.14em] text-paper-dim ${isLarge ? "text-[9px]" : "text-[8px]"}`}>
-            Verified Record
+            Public Record
           </span>
           {story.sourceId && (
             <span className={`font-stamp tracking-[0.1em] text-brass ${isLarge ? "text-[9px]" : "text-[8px]"}`}>

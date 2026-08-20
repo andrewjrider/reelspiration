@@ -1,10 +1,35 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { challenges, getChallenge } from "@/data/challenges";
-import { getStoriesByChallenge } from "@/data/stories";
+import { getPublicStoriesByChallenge } from "@/data/stories";
+import { atmosphereForChallenge } from "@/data/atmosphere";
 import StoryCard from "@/components/StoryCard";
+import AtmosphericBand from "@/components/AtmosphericBand";
+import { pageMetadata } from "@/lib/seo";
 
 export function generateStaticParams() {
   return challenges.map((c) => ({ slug: c.slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const challenge = getChallenge(slug);
+  if (!challenge) return { robots: { index: false, follow: false } };
+
+  const metadata = pageMetadata({
+    title: `${challenge.prompt} Stories`,
+    description: challenge.description,
+    path: `/challenges/${challenge.slug}`,
+    image: atmosphereForChallenge(challenge.slug),
+  });
+
+  return getPublicStoriesByChallenge(slug).length > 0
+    ? metadata
+    : { ...metadata, robots: { index: false, follow: true } };
 }
 
 export default async function ChallengePage({
@@ -16,21 +41,25 @@ export default async function ChallengePage({
   const challenge = getChallenge(slug);
   if (!challenge) notFound();
 
-  const stories = getStoriesByChallenge(slug);
+  const stories = getPublicStoriesByChallenge(slug);
 
   return (
-    <div className="max-w-5xl mx-auto px-6 py-16">
-      <p className="font-stamp text-xs uppercase tracking-[0.2em] text-brass mb-4">
-        Collection
-      </p>
-      <h1 className="font-serif text-4xl sm:text-5xl text-paper">
-        {challenge.prompt}
-      </h1>
-      <p className="text-paper-dim mt-4 max-w-lg leading-relaxed">
-        {challenge.description}
-      </p>
+    <div>
+      <AtmosphericBand src={atmosphereForChallenge(slug)} scrim="heavy">
+        <div className="max-w-5xl mx-auto px-6 pt-16 pb-14">
+          <p className="font-stamp text-xs uppercase tracking-[0.2em] text-brass mb-4">
+            Collection
+          </p>
+          <h1 className="font-serif text-4xl sm:text-5xl text-paper">
+            {challenge.prompt}
+          </h1>
+          <p className="text-paper-dim mt-4 max-w-lg leading-relaxed">
+            {challenge.description}
+          </p>
+        </div>
+      </AtmosphericBand>
 
-      <div className="mt-12">
+      <div className="max-w-5xl mx-auto px-6 py-14">
         {stories.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {stories.map((s) => (
@@ -39,8 +68,7 @@ export default async function ChallengePage({
           </div>
         ) : (
           <p className="text-paper-dim italic border border-line p-8 text-center">
-            New records for this moment are in production. Check back soon —
-            or subscribe below to get one the day it publishes.
+            No records have been published for this collection yet.
           </p>
         )}
       </div>

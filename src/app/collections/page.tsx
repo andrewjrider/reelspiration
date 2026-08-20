@@ -1,7 +1,17 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { collections } from "@/data/collections";
-import { getStoriesByCollection } from "@/data/stories";
+import { getPublicStoriesByCollection } from "@/data/stories";
 import AtmosphericBand from "@/components/AtmosphericBand";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = pageMetadata({
+  title: "Story Collections",
+  description:
+    "Browse Reelspiration records grouped by business, athletics, historic decisions, courage, and comebacks.",
+  path: "/collections",
+  image: "/atmosphere/tahoe-shoreline.png",
+});
 
 export default function CollectionsIndex() {
   return (
@@ -24,7 +34,7 @@ export default function CollectionsIndex() {
       <div className="max-w-5xl mx-auto px-6 py-14">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-line border border-line">
           {collections.map((c) => {
-            const count = getStoriesByCollection(c.slug).length;
+            const count = getPublicStoriesByCollection(c.slug).length;
             return (
               <Link
                 key={c.slug}

@@ -1,5 +1,15 @@
+import type { Metadata } from "next";
 import ChallengePicker from "@/components/ChallengePicker";
 import AtmosphericBand from "@/components/AtmosphericBand";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = pageMetadata({
+  title: "Stories by Challenge",
+  description:
+    "Browse published stories about late starts, rejection, fresh starts, courage, recovery, and leadership.",
+  path: "/challenges",
+  image: "/atmosphere/petrified-forest-rocks.png",
+});
 
 export default function ChallengesIndex() {
   return (

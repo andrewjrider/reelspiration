@@ -2,11 +2,35 @@ import type { Metadata } from "next";
 import "./globals.css";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import {
+  DEFAULT_DESCRIPTION,
+  DEFAULT_SOCIAL_IMAGE,
+  SITE_NAME,
+  SITE_URL,
+} from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Reelspiration — Real Stories. Real Proof.",
-  description:
-    "A trusted, searchable library of human perseverance. Recognizable people, real adversity, one memorable takeaway.",
+  metadataBase: SITE_URL,
+  title: {
+    default: "Reelspiration — Real Stories. Real Proof.",
+    template: "%s | Reelspiration",
+  },
+  description: DEFAULT_DESCRIPTION,
+  applicationName: SITE_NAME,
+  openGraph: {
+    type: "website",
+    siteName: SITE_NAME,
+    title: "Reelspiration — Real Stories. Real Proof.",
+    description: DEFAULT_DESCRIPTION,
+    url: SITE_URL,
+    images: [{ url: DEFAULT_SOCIAL_IMAGE, alt: "Reelspiration — real stories and real proof" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Reelspiration — Real Stories. Real Proof.",
+    description: DEFAULT_DESCRIPTION,
+    images: [DEFAULT_SOCIAL_IMAGE],
+  },
 };
 
 export default function RootLayout({

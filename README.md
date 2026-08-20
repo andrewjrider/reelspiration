@@ -5,9 +5,9 @@ Real Stories. Real Proof. Real Reelspiration.
 This is a working Next.js build of the site described in
 `Reelspiration_Business_Vision_and_Launch_Plan`, mapped directly onto that
 document's own Phase 1 MVP checklist. It's a real, deployable app — not a
-mockup — seeded with 4 fully-written sample stories so every page type
-renders with real content while the actual 10 volumes are being prepared
-for import (see `CONTENT_IMPORT.md`).
+mockup — backed by the approved 110-record imported library. Public access
+and verification state are derived independently so source-link review does
+not hide a structurally complete story (see `CONTENT_IMPORT.md`).
 
 ## What's actually built (Phase 1, from the brief)
 
@@ -18,10 +18,10 @@ for import (see `CONTENT_IMPORT.md`).
 | Homepage, story page, challenge page, collection page | Done — all live |
 | "What are you facing today?" entry point | Done — homepage signature element |
 | Search | Not built — see "Not built yet" below |
-| Email signup | Form UI built; not wired to a provider yet (see below) |
+| Email signup | Accessible form and server endpoint built; provider configuration required (see below) |
 | Analytics | Not built |
 | Editorial admin area | Not built — CLI tools stand in for now (see below) |
-| Load 50+ stories before launch | Blocked on your volumes — schema and pipeline are ready |
+| Load 50+ stories before launch | Done — all 110 structurally complete imported records are public with honest verification states |
 
 ## What's built beyond Phase 1's literal checklist
 
@@ -125,10 +125,12 @@ Visit http://localhost:3000
   into literal code templates that auto-populate from each story record,
   which is probably worth building once you have 10-20 stories through
   the pipeline and know which template actually performs).
-- **Email delivery.** The signup form is real UI but not wired to a
-  sender. Recommend Resend or ConvertKit — both have simple Next.js
-  integrations; I can wire this in as soon as you tell me which you want
-  to run this on.
+- **Email delivery provider.** The signup form validates input, exposes
+  accessible success/error states, and posts through `/api/newsletter`.
+  Production capture remains disabled until `NEWSLETTER_SIGNUP_URL` is
+  configured with an HTTPS endpoint that accepts
+  `{ "email": "...", "source": "reelspiration.com" }`. An optional bearer
+  token can be supplied with `NEWSLETTER_API_KEY`; see `.env.example`.
 - **Search.** Punting deliberately — with ~100 stories, category/
   challenge browsing covers most of what search would do. Worth building
   once the library is large enough that browsing stops being sufficient.

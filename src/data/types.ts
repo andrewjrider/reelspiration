@@ -43,6 +43,20 @@ export interface SourceRecord {
   url: string;
 }
 
+export interface VerificationRecord {
+  /** ISO date of a completed verification review. */
+  verifiedAt: string;
+  /** Public-facing verifier or editorial desk name, when supplied. */
+  verifiedBy?: string;
+  /** A concise public note about the scope of the review. */
+  note?: string;
+}
+
+export type VerificationStatus =
+  | "verified"
+  | "source-review"
+  | "editorial-review";
+
 export interface StoryRecord {
   slug: string;
   subject: string; // the recognizable person/team/event
@@ -87,6 +101,16 @@ export interface StoryRecord {
   rippleScore: number; // 1-15
 
   sources: SourceRecord[];
+  /**
+   * Optional because imported records must not be presented as verified
+   * until a completed review is explicitly recorded.
+   */
+  verification?: VerificationRecord;
+  /**
+   * Independent of publication. Imported legacy records are normalized to a
+   * concrete value at the public-library boundary in stories.ts.
+   */
+  verificationStatus?: VerificationStatus;
   status: "published" | "draft" | "needs-review";
   publishedAt: string; // ISO date
 }

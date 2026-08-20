@@ -1,15 +1,55 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getStory, getAllStories, getStoriesByChallenge } from "@/data/stories";
+import {
+  getPublicPublishedStory,
+  getPublicPublishedStories,
+  getPublicStoriesByChallenge,
+} from "@/data/stories";
 import { getChallenge } from "@/data/challenges";
 import { getCollection } from "@/data/collections";
+import { atmosphereForChallenge } from "@/data/atmosphere";
+import { isPublicSourceUrl, verificationLabel } from "@/data/public-content";
 import StoryCard from "@/components/StoryCard";
+import AtmosphericBand from "@/components/AtmosphericBand";
+import SourceVerification from "@/components/SourceVerification";
+import { absoluteUrl, pageMetadata, SITE_NAME } from "@/lib/seo";
 
 export function generateStaticParams() {
-  // All statuses get a real URL, including needs-review, so editors have
-  // a working preview link. Public nav/listings only surface published
-  // stories — see getPublishedStories() usage elsewhere.
-  return getAllStories().map((s) => ({ slug: s.slug }));
+  return getPublicPublishedStories().map((story) => ({ slug: story.slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const story = getPublicPublishedStory(slug);
+
+  if (!story) {
+    return { robots: { index: false, follow: false } };
+  }
+
+  const title = `${story.subject}: ${story.dek}`;
+  const description = story.canonicalStory
+    ? story.canonicalStory.slice(0, 157).trimEnd() + "…"
+    : story.reelspiration;
+  const metadata = pageMetadata({
+    title,
+    description,
+    path: `/stories/${story.slug}`,
+    image: atmosphereForChallenge(story.challenges[0] ?? ""),
+  });
+
+  return {
+    ...metadata,
+    openGraph: {
+      ...metadata.openGraph,
+      type: "article",
+      publishedTime: story.publishedAt,
+    },
+  };
 }
 
 export default async function StoryPage({
@@ -18,51 +58,90 @@ export default async function StoryPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const story = getStory(slug);
+  const story = getPublicPublishedStory(slug);
   if (!story) notFound();
 
-  const related = getStoriesByChallenge(story.challenges[0])
+  const related = getPublicStoriesByChallenge(story.challenges[0])
     .filter((s) => s.slug !== story.slug)
     .slice(0, 2);
+  const recordStatusLabel = verificationLabel(story);
+  const citations = story.sources
+    .filter((source) => isPublicSourceUrl(source.url))
+    .map((source) => source.url);
+  const storyUrl = absoluteUrl(`/stories/${story.slug}`);
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: `${story.subject}: ${story.dek}`,
+    description: story.reelspiration,
+    datePublished: story.publishedAt,
+    mainEntityOfPage: storyUrl,
+    url: storyUrl,
+    image: absoluteUrl(atmosphereForChallenge(story.challenges[0] ?? "")),
+    author: { "@type": "Organization", name: SITE_NAME },
+    publisher: { "@type": "Organization", name: SITE_NAME, url: absoluteUrl("/") },
+    ...(citations.length > 0 ? { citation: citations } : {}),
+  };
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Stories",
+        item: absoluteUrl("/challenges"),
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: story.subject,
+        item: storyUrl,
+      },
+    ],
+  };
 
   return (
-    <article className="max-w-3xl mx-auto px-6 py-16">
-      {story.status !== "published" && (
-        <div className="border border-rust bg-ink-raised px-4 py-3 mb-8">
-          <p className="font-stamp text-[10px] uppercase tracking-[0.12em] text-rust">
-            {story.status === "needs-review" ? "Needs editorial review" : "Draft"} — not
-            visible on public pages, preview only
+    <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([articleJsonLd, breadcrumbJsonLd]).replace(/</g, "\\u003c"),
+        }}
+      />
+
+      <AtmosphericBand src={atmosphereForChallenge(story.challenges[0] ?? "")} scrim="heavy">
+        <div className="max-w-3xl mx-auto px-6 pt-14 sm:pt-16 pb-12">
+          {/* Breadcrumb / challenge tags */}
+          <div className="flex flex-wrap gap-2 mb-8">
+            {story.challenges.map((c) => {
+              const ch = getChallenge(c);
+              return ch ? (
+                <Link
+                  key={c}
+                  href={`/challenges/${c}`}
+                  className="font-stamp text-[10px] uppercase tracking-[0.1em] text-brass border border-brass px-2 py-1 hover:bg-brass hover:text-ink transition-colors"
+                >
+                  {ch.prompt}
+                </Link>
+              ) : null;
+            })}
+          </div>
+
+          <p className="font-stamp text-[10px] uppercase tracking-[0.15em] text-paper-dim mb-3">
+            {recordStatusLabel}
+          </p>
+          <h1 className="font-serif text-4xl sm:text-5xl text-paper leading-tight">
+            {story.subject}
+          </h1>
+          <p className="text-xl text-paper-dim italic mt-4 leading-relaxed">
+            {story.dek}
           </p>
         </div>
-      )}
+      </AtmosphericBand>
 
-      {/* Breadcrumb / challenge tags */}
-      <div className="flex flex-wrap gap-2 mb-8">
-        {story.challenges.map((c) => {
-          const ch = getChallenge(c);
-          return ch ? (
-            <Link
-              key={c}
-              href={`/challenges/${c}`}
-              className="font-stamp text-[10px] uppercase tracking-[0.1em] text-brass border border-brass px-2 py-1 hover:bg-brass hover:text-ink transition-colors"
-            >
-              {ch.prompt}
-            </Link>
-          ) : null;
-        })}
-      </div>
-
-      <p className="font-stamp text-[10px] uppercase tracking-[0.15em] text-paper-dim mb-3">
-        Verified Record
-      </p>
-      <h1 className="font-serif text-4xl sm:text-5xl text-paper leading-tight">
-        {story.subject}
-      </h1>
-      <p className="text-xl text-paper-dim italic mt-4 leading-relaxed">
-        {story.dek}
-      </p>
-
-      <div className="mt-12 space-y-10">
+      <article className="max-w-3xl mx-auto px-6 py-16">
+      <div className="space-y-10">
         {story.canonicalStory ? (
           <div>
             <p className="font-stamp text-[10px] uppercase tracking-[0.15em] text-paper-dim mb-2">
@@ -133,19 +212,7 @@ export default async function StoryPage({
         </div>
       </div>
 
-      {/* Sources / rights — trust infrastructure from the brief */}
-      <div className="mt-8 pt-6 border-t border-line">
-        <p className="font-stamp text-[10px] uppercase tracking-[0.12em] text-paper-dim mb-3">
-          Sources
-        </p>
-        <ul className="space-y-1">
-          {story.sources.map((src) => (
-            <li key={src.url} className="text-xs text-paper-dim">
-              {src.label}
-            </li>
-          ))}
-        </ul>
-      </div>
+      <SourceVerification story={story} />
 
       {/* Related stories */}
       {related.length > 0 && (
@@ -160,7 +227,8 @@ export default async function StoryPage({
           </div>
         </div>
       )}
-    </article>
+      </article>
+    </div>
   );
 }
 

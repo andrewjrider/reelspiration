@@ -1,16 +1,26 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import ChallengePicker from "@/components/ChallengePicker";
 import StoryCard from "@/components/StoryCard";
 import PortraitFrame from "@/components/PortraitFrame";
 import AtmosphericBand from "@/components/AtmosphericBand";
-import { getPublishedStories, getAllStories } from "@/data/stories";
+import { getPublicPublishedStories } from "@/data/stories";
 import { collections } from "@/data/collections";
+import NewsletterSignup from "@/components/NewsletterSignup";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = pageMetadata({
+  title: "Real Stories. Real Proof.",
+  description:
+    "A published library of recognizable people, teams, and moments that prove a setback does not have to decide the ending.",
+  path: "/",
+});
 
 export default function Home() {
-  const stories = getPublishedStories();
+  const stories = getPublicPublishedStories();
   const featured = stories[0];
   const rest = stories.slice(1);
-  const totalRecords = getAllStories().length;
+  const totalRecords = stories.length;
 
   return (
     <div className="overflow-hidden">
@@ -39,10 +49,11 @@ export default function Home() {
               their story isn&apos;t over,{" "}
               <span className="italic text-brass-bright">they need a story</span>
               <br className="hidden sm:block" />
+              {" "}
               <span className="italic text-brass-bright">they recognize.</span>
             </h1>
             <p className="text-paper-dim mt-8 max-w-md leading-relaxed text-[15px]">
-              A verified library of recognizable people, teams, and moments —
+              A public library of recognizable people, teams, and moments —
               proof that setbacks, rejection, injury, loss, and age
               don&apos;t automatically decide the ending.
             </p>
@@ -57,8 +68,8 @@ export default function Home() {
               <div className="font-stamp text-[11px] uppercase tracking-[0.1em] text-paper-dim">
                 <span className="text-paper text-base font-serif tracking-normal not-italic mr-1.5">
                   {totalRecords}
-                </span>
-                verified records
+                </span>{" "}
+                public records
               </div>
             </div>
           </div>
@@ -90,7 +101,7 @@ export default function Home() {
             Start With a Story
           </h2>
           <span className="hidden sm:block font-serif italic text-paper-dim text-sm">
-            Six kinds of proof, one hundred and ten records
+            Six kinds of proof, {totalRecords} public records
           </span>
         </div>
         <ChallengePicker />
@@ -156,24 +167,11 @@ export default function Home() {
                 Five Minutes of Reelspiration, once a week.
               </h2>
               <p className="text-paper-dim mt-3 max-w-md text-sm leading-relaxed">
-                Tell us what you&apos;re facing. We&apos;ll send one verified story
+                Tell us what you&apos;re facing. We&apos;ll send one public story
                 that fits it — no generic pep talks, no daily noise.
               </p>
             </div>
-            <form className="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
-              <input
-                type="email"
-                required
-                placeholder="you@email.com"
-                className="flex-1 lg:w-72 bg-ink border border-line px-4 py-3.5 text-paper placeholder:text-paper-dim focus:outline-none focus:border-brass"
-              />
-              <button
-                type="submit"
-                className="font-stamp text-xs uppercase tracking-[0.12em] bg-brass text-ink px-6 py-3.5 hover:bg-brass-bright transition-colors whitespace-nowrap"
-              >
-                Subscribe
-              </button>
-            </form>
+            <NewsletterSignup />
           </div>
         </section>
       </AtmosphericBand>

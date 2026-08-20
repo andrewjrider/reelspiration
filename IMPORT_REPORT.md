@@ -1,6 +1,19 @@
 # Import Report — 10 Volumes + Military Commanders Companion
 
-## Headline numbers
+## Current public-library activation
+
+All 110 structurally complete records are now public without rewriting the
+generated data in `src/data/imported-stories.ts`. The original imported
+`published` / `needs-review` values documented below are retained as an import
+snapshot; `src/data/stories.ts` now separates public availability from
+verification state at runtime.
+
+Public records display one of `Verified Record`, `Source Review in Progress`,
+or `Editorial Review in Progress`. Missing source URLs do not hide an otherwise
+complete story, and no record is labeled verified without complete linked
+sources and explicit verification metadata.
+
+## Original import snapshot
 
 - 11 files uploaded, 10 parsed as volumes (1 skipped, see below)
 - **110 stories** parsed with 0 missing core fields, 0 slug collisions
