@@ -4,8 +4,12 @@ import ChallengePicker from "@/components/ChallengePicker";
 import StoryCard from "@/components/StoryCard";
 import PortraitFrame from "@/components/PortraitFrame";
 import AtmosphericBand from "@/components/AtmosphericBand";
-import { getPublicPublishedStories } from "@/data/stories";
+import {
+  getPublicPublishedStories,
+  getPublicStoriesByCollection,
+} from "@/data/stories";
 import { collections } from "@/data/collections";
+import { StoryRecord } from "@/data/types";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import { pageMetadata } from "@/lib/seo";
 
@@ -16,11 +20,80 @@ export const metadata: Metadata = pageMetadata({
   path: "/",
 });
 
+const editorialGroupSpecs = [
+  {
+    title: "Business & Entrepreneurship",
+    description: "Builders who kept moving when the first version failed.",
+    href: "/collections/business-builders",
+    collection: "business-builders",
+    preferredSlugs: [
+      "steve-jobs",
+      "walt-disney",
+      "colonel-harland-sanders",
+      "sara-blakely",
+    ],
+  },
+  {
+    title: "Athletic Adversity",
+    description: "Competitors whose defining work began after the setback.",
+    href: "/collections/athletic-adversity",
+    collection: "athletic-adversity",
+    preferredSlugs: [
+      "bethany-hamilton",
+      "simone-biles",
+      "jackie-robinson",
+      "niki-lauda",
+    ],
+  },
+  {
+    title: "History & Leadership",
+    description: "Decisions made under pressure, with consequences beyond one life.",
+    href: "/collections/historic-decisions",
+    collection: "historic-decisions",
+    preferredSlugs: [
+      "abraham-lincoln",
+      "nelson-mandela",
+      "rosa-parks",
+      "winston-churchill",
+    ],
+  },
+  {
+    title: "Greatest Comebacks",
+    description: "The library's clearest proof that an ending can become a turn.",
+    href: "/collections/greatest-comebacks",
+    collection: "greatest-comebacks",
+    preferredSlugs: [
+      "malala-yousafzai",
+      "terry-fox",
+      "tiger-woods",
+      "robert-downey-jr",
+    ],
+  },
+] as const;
+
 export default function Home() {
   const stories = getPublicPublishedStories();
   const featured = stories[0];
-  const rest = stories.slice(1);
   const totalRecords = stories.length;
+  const usedSlugs = new Set(featured ? [featured.slug] : []);
+  const editorialGroups = editorialGroupSpecs.map((group) => {
+    const candidates = getPublicStoriesByCollection(group.collection);
+    const bySlug = new Map(candidates.map((story) => [story.slug, story]));
+    const selected = group.preferredSlugs
+      .map((slug) => bySlug.get(slug))
+      .filter((story): story is StoryRecord => Boolean(story))
+      .filter((story) => !usedSlugs.has(story.slug));
+
+    for (const story of candidates) {
+      if (selected.length >= 4) break;
+      if (!usedSlugs.has(story.slug) && !selected.some((item) => item.slug === story.slug)) {
+        selected.push(story);
+      }
+    }
+    selected.slice(0, 4).forEach((story) => usedSlugs.add(story.slug));
+
+    return { ...group, stories: selected.slice(0, 4) };
+  });
 
   return (
     <div className="overflow-hidden">
@@ -108,26 +181,11 @@ export default function Home() {
       </section>
 
       {/* MORE RECORDS — now carrying real visual weight via PortraitFrame */}
-      {rest.length > 0 && (
-        <section className="max-w-6xl mx-auto px-6 pb-24">
-          <div className="flex items-baseline justify-between mb-5">
-            <h2 className="font-stamp text-xs uppercase tracking-[0.2em] text-paper-dim">
-              More Records
-            </h2>
-            <Link
-              href="/collections"
-              className="font-stamp text-[10px] uppercase tracking-[0.12em] text-brass hover:text-brass-bright"
-            >
-              All Collections →
-            </Link>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-            {rest.map((s) => (
-              <StoryCard key={s.slug} story={s} />
-            ))}
-          </div>
-        </section>
-      )}
+      <section className="max-w-6xl mx-auto px-6 pb-24 space-y-16">
+        {editorialGroups.slice(0, 2).map((group) => (
+          <EditorialGroup key={group.title} {...group} />
+        ))}
+      </section>
 
       {/* PULL-QUOTE DIVIDER — a breath between sections, not just more text */}
       <AtmosphericBand src="/atmosphere/stone-wall-ruin.png" scrim="light" className="mb-24">
@@ -140,11 +198,30 @@ export default function Home() {
         </div>
       </AtmosphericBand>
 
+      <section className="max-w-6xl mx-auto px-6 pb-24 space-y-16">
+        {editorialGroups.slice(2).map((group) => (
+          <EditorialGroup key={group.title} {...group} />
+        ))}
+      </section>
+
       {/* COLLECTIONS STRIP */}
       <section className="max-w-6xl mx-auto px-6 pb-24">
-        <h2 className="font-stamp text-xs uppercase tracking-[0.2em] text-paper-dim mb-5">
-          Browse By Collection
-        </h2>
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-5 mb-7">
+          <div>
+            <h2 className="font-stamp text-xs uppercase tracking-[0.2em] text-paper-dim">
+              Continue Browsing
+            </h2>
+            <p className="font-serif text-2xl text-paper mt-2">
+              Every published record remains in the library.
+            </p>
+          </div>
+          <Link
+            href="/stories"
+            className="font-stamp text-[11px] uppercase tracking-[0.14em] bg-brass text-ink px-5 py-3.5 hover:bg-brass-bright transition-colors text-center"
+          >
+            Browse All {totalRecords} Stories
+          </Link>
+        </div>
         <div className="flex flex-wrap gap-2.5">
           {collections.map((c) => (
             <Link
@@ -175,6 +252,42 @@ export default function Home() {
           </div>
         </section>
       </AtmosphericBand>
+    </div>
+  );
+}
+
+function EditorialGroup({
+  title,
+  description,
+  href,
+  stories,
+}: {
+  title: string;
+  description: string;
+  href: string;
+  stories: StoryRecord[];
+}) {
+  return (
+    <div>
+      <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 mb-5">
+        <div>
+          <h2 className="font-serif text-3xl text-paper">{title}</h2>
+          <p className="text-paper-dim text-sm mt-2 leading-relaxed">
+            {description}
+          </p>
+        </div>
+        <Link
+          href={href}
+          className="font-stamp text-[11px] uppercase tracking-[0.12em] text-brass hover:text-brass-bright shrink-0"
+        >
+          Explore Collection →
+        </Link>
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {stories.map((story) => (
+          <StoryCard key={story.slug} story={story} showContext={false} />
+        ))}
+      </div>
     </div>
   );
 }

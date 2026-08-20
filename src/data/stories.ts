@@ -1,4 +1,4 @@
-import { ChallengeSlug, StoryRecord, VerificationStatus } from "./types";
+import { ChallengeSlug, StoryRecord, VerificationStatus, totalScore } from "./types";
 import { importedStories } from "./imported-stories";
 import { isPublicSourceUrl, toPublicStory } from "./public-content";
 
@@ -140,4 +140,29 @@ export function getStoriesByCollection(collectionSlug: string) {
 
 export function getPublicStoriesByCollection(collectionSlug: string) {
   return getStoriesByCollection(collectionSlug).map(toPublicStory);
+}
+
+export function getPublicRelatedStories(story: StoryRecord, limit = 3) {
+  const sharedCount = (left: string[], right: string[]) =>
+    left.filter((value) => right.includes(value)).length;
+
+  return getPublicPublishedStories()
+    .filter((candidate) => candidate.slug !== story.slug)
+    .sort((a, b) => {
+      const challengeDifference =
+        sharedCount(b.challenges, story.challenges) -
+        sharedCount(a.challenges, story.challenges);
+      if (challengeDifference) return challengeDifference;
+
+      const collectionDifference =
+        sharedCount(b.collections, story.collections) -
+        sharedCount(a.collections, story.collections);
+      if (collectionDifference) return collectionDifference;
+
+      const strengthDifference = totalScore(b) - totalScore(a);
+      if (strengthDifference) return strengthDifference;
+
+      return a.subject.localeCompare(b.subject);
+    })
+    .slice(0, limit);
 }

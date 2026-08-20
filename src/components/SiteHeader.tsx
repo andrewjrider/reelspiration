@@ -18,8 +18,8 @@ export default function SiteHeader() {
           </span>
         </Link>
         <nav aria-label="Primary" className="hidden sm:flex items-center gap-6 font-stamp text-xs uppercase tracking-[0.12em] text-paper-dim">
-          <Link href="/challenges" className="hover:text-brass transition-colors">
-            Stories
+          <Link href="/stories" className="hover:text-brass transition-colors">
+            Browse All
           </Link>
           <Link href="/collections" className="hover:text-brass transition-colors">
             Collections
@@ -51,7 +51,7 @@ export default function SiteHeader() {
       >
         <div className="max-w-5xl mx-auto px-6 py-4 grid gap-px bg-line">
           {[
-            ["Stories", "/challenges"],
+            ["Browse All", "/stories"],
             ["Collections", "/collections"],
             ["About", "/brand"],
             ["Weekly Proof", "/#subscribe"],

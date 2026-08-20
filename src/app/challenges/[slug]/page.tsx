@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { challenges, getChallenge } from "@/data/challenges";
 import { getPublicStoriesByChallenge } from "@/data/stories";
 import { atmosphereForChallenge } from "@/data/atmosphere";
-import StoryCard from "@/components/StoryCard";
+import ProgressiveStoryGrid from "@/components/ProgressiveStoryGrid";
 import AtmosphericBand from "@/components/AtmosphericBand";
 import { pageMetadata } from "@/lib/seo";
 
@@ -47,9 +47,11 @@ export default async function ChallengePage({
     <div>
       <AtmosphericBand src={atmosphereForChallenge(slug)} scrim="heavy">
         <div className="max-w-5xl mx-auto px-6 pt-16 pb-14">
-          <p className="font-stamp text-xs uppercase tracking-[0.2em] text-brass mb-4">
-            Collection
-          </p>
+          <div className="flex items-center gap-3 font-stamp text-[11px] uppercase tracking-[0.18em] text-brass mb-4">
+            <span>Challenge</span>
+            <span aria-hidden="true" className="h-px w-5 bg-brass/60" />
+            <span>{stories.length} stories</span>
+          </div>
           <h1 className="font-serif text-4xl sm:text-5xl text-paper">
             {challenge.prompt}
           </h1>
@@ -61,14 +63,14 @@ export default async function ChallengePage({
 
       <div className="max-w-5xl mx-auto px-6 py-14">
         {stories.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {stories.map((s) => (
-              <StoryCard key={s.slug} story={s} />
-            ))}
-          </div>
+          <ProgressiveStoryGrid
+            stories={stories}
+            initialCount={12}
+            showContext={false}
+          />
         ) : (
           <p className="text-paper-dim italic border border-line p-8 text-center">
-            No records have been published for this collection yet.
+            No records have been published for this challenge yet.
           </p>
         )}
       </div>

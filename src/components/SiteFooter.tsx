@@ -12,6 +12,7 @@ export default function SiteFooter() {
           Real stories. Real proof. Real Reelspiration.
         </p>
         <nav aria-label="Footer" className="flex gap-4 font-stamp text-[10px] uppercase tracking-[0.1em] text-paper-dim">
+          <Link href="/stories" className="hover:text-brass transition-colors">Browse All</Link>
           <Link href="/brand" className="hover:text-brass transition-colors">About</Link>
           <Link href="/privacy" className="hover:text-brass transition-colors">Privacy</Link>
         </nav>

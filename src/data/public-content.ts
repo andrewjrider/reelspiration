@@ -43,6 +43,7 @@ export function toPublicStory(story: StoryRecord): StoryRecord {
     slug: story.slug,
     subject: cleanPublicText(story.subject),
     dek: cleanPublicText(story.dek),
+    heroMedia: story.heroMedia,
     challenges: story.challenges,
     collections: story.collections,
     canonicalStory: story.canonicalStory

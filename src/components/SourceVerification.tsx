@@ -21,7 +21,7 @@ export default function SourceVerification({ story }: { story: StoryRecord }) {
         <div>
           <h2
             id="sources-heading"
-            className="font-stamp text-[10px] uppercase tracking-[0.12em] text-paper-dim"
+            className="font-stamp text-[11px] uppercase tracking-[0.12em] text-paper-dim"
           >
             Sources &amp; Record Status
           </h2>

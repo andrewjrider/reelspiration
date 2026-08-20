@@ -52,6 +52,33 @@ export interface VerificationRecord {
   note?: string;
 }
 
+export type StoryHeroMedia =
+  | {
+      kind: "image";
+      src: string;
+      alt: string;
+      caption?: string;
+    }
+  | {
+      kind: "video";
+      src: string;
+      title: string;
+      poster?: string;
+      caption?: string;
+    }
+  | {
+      kind: "embed";
+      src: string;
+      title: string;
+      caption?: string;
+    }
+  | {
+      kind: "atmosphere";
+      src: string;
+      alt: string;
+      caption?: string;
+    };
+
 export type VerificationStatus =
   | "verified"
   | "source-review"
@@ -61,6 +88,8 @@ export interface StoryRecord {
   slug: string;
   subject: string; // the recognizable person/team/event
   dek: string; // one-line hook, the "reason to stop scrolling"
+  /** Optional approved public media. Omit to use the branded archival fallback. */
+  heroMedia?: StoryHeroMedia;
   challenges: ChallengeSlug[];
   collections: CollectionSlug[];
 
