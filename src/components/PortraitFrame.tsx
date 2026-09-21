@@ -36,10 +36,6 @@ export default function PortraitFrame({
           fill
           sizes={size === "lg" ? "(min-width: 1024px) 40vw, 90vw" : "(min-width: 640px) 33vw, 90vw"}
           className="object-cover"
-          style={{
-            filter: "grayscale(1) contrast(1.05)",
-            mixBlendMode: "luminosity",
-          }}
         />
       ) : (
         <ArchivalPlate story={story} size={size} />
@@ -50,8 +46,7 @@ export default function PortraitFrame({
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(180deg, rgba(18,25,21,0.15) 0%, rgba(18,25,21,0.55) 100%), linear-gradient(0deg, #121915 0%, transparent 55%)",
-            mixBlendMode: "multiply",
+              "linear-gradient(180deg, rgba(18,25,21,0) 55%, rgba(18,25,21,0.82) 100%)",
           }}
         />
       )}
