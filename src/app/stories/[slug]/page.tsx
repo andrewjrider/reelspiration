@@ -127,45 +127,52 @@ export default async function StoryPage({
       />
 
       <AtmosphericBand src={atmosphereForChallenge(story.challenges[0] ?? "")} scrim="heavy">
-        <div className="max-w-3xl mx-auto px-6 pt-14 sm:pt-16 pb-12">
-          {/* Breadcrumb / challenge tags */}
-          <div className="flex flex-wrap gap-2 mb-8">
-            {story.challenges.map((c) => {
-              const ch = getChallenge(c);
-              return ch ? (
-                <Link
-                  key={c}
-                  href={`/challenges/${c}`}
-                  className="font-stamp text-[11px] uppercase tracking-[0.1em] text-brass border border-brass px-2 py-1 hover:bg-brass hover:text-ink transition-colors"
-                >
-                  {ch.prompt}
-                </Link>
-              ) : null;
-            })}
+        <div
+          className={`max-w-5xl mx-auto px-6 pt-14 sm:pt-16 pb-12 ${
+            portrait
+              ? "grid grid-cols-1 sm:grid-cols-[1fr_auto] gap-10 sm:items-end"
+              : ""
+          }`}
+        >
+          <div className={portrait ? "max-w-2xl" : "max-w-3xl"}>
+            {/* Breadcrumb / challenge tags */}
+            <div className="flex flex-wrap gap-2 mb-8">
+              {story.challenges.map((c) => {
+                const ch = getChallenge(c);
+                return ch ? (
+                  <Link
+                    key={c}
+                    href={`/challenges/${c}`}
+                    className="font-stamp text-[11px] uppercase tracking-[0.1em] text-brass border border-brass px-2 py-1 hover:bg-brass hover:text-ink transition-colors"
+                  >
+                    {ch.prompt}
+                  </Link>
+                ) : null;
+              })}
+            </div>
+
+            <p className="font-stamp text-[11px] uppercase tracking-[0.15em] text-paper-dim mb-3">
+              {recordStatusLabel}
+            </p>
+            <h1 className="font-serif text-4xl sm:text-5xl text-paper leading-tight">
+              {story.subject}
+            </h1>
+            <p className="text-xl text-paper-dim italic mt-4 leading-relaxed">
+              {story.dek}
+            </p>
           </div>
 
-          <p className="font-stamp text-[11px] uppercase tracking-[0.15em] text-paper-dim mb-3">
-            {recordStatusLabel}
-          </p>
-          <h1 className="font-serif text-4xl sm:text-5xl text-paper leading-tight">
-            {story.subject}
-          </h1>
-          <p className="text-xl text-paper-dim italic mt-4 leading-relaxed">
-            {story.dek}
-          </p>
+          {portrait && (
+            <div className="w-full max-w-[200px] sm:w-[200px] shrink-0">
+              <PortraitFrame story={story} imageSrc={portrait} size="sm" />
+            </div>
+          )}
         </div>
       </AtmosphericBand>
 
-      {portrait && (
-        <div className="max-w-3xl mx-auto px-6">
-          <div className="max-w-[220px] -mt-16 sm:-mt-20 relative z-10">
-            <PortraitFrame story={story} imageSrc={portrait} size="sm" />
-          </div>
-        </div>
-      )}
-
       <StoryHeroMedia
         subject={story.subject}
+        quote={story.reelspiration}
         sourceId={story.sourceId}
         media={story.heroMedia}
         fallbackSrc={atmosphereForChallenge(story.challenges[0] ?? "")}

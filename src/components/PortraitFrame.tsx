@@ -23,9 +23,9 @@ export default function PortraitFrame({
   size = "lg",
 }: PortraitFrameProps) {
   const aspectClass = aspect === "portrait" ? "aspect-[4/5]" : "aspect-square";
-  const captionPad = size === "sm" ? "p-3" : "p-4";
-  const nameSize = size === "sm" ? "text-[10px]" : "text-[11px]";
-  const dekSize = size === "sm" ? "text-[11px]" : "text-[12px]";
+  const captionPad = size === "sm" ? "p-4" : "p-6 sm:p-7";
+  const nameSize = size === "sm" ? "text-xs" : "text-sm sm:text-base";
+  const dekSize = size === "sm" ? "text-sm" : "text-xl sm:text-2xl";
 
   return (
     <div className={`relative ${aspectClass} w-full overflow-hidden bg-ink-raised border border-line`}>
@@ -46,7 +46,9 @@ export default function PortraitFrame({
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(180deg, rgba(18,25,21,0) 55%, rgba(18,25,21,0.82) 100%)",
+              size === "sm"
+                ? "linear-gradient(180deg, rgba(18,25,21,0) 55%, rgba(18,25,21,0.85) 100%)"
+                : "linear-gradient(180deg, rgba(18,25,21,0) 40%, rgba(18,25,21,0.92) 100%)",
           }}
         />
       )}
@@ -57,11 +59,15 @@ export default function PortraitFrame({
           already carries the name and dek as part of its composition —
           repeating them underneath would read as a mistake. */}
       {imageSrc && (
-        <div className={`absolute bottom-0 left-0 right-0 ${captionPad} bg-gradient-to-t from-ink via-ink/70 to-transparent`}>
-          <p className={`font-stamp ${nameSize} uppercase tracking-[0.1em] text-paper`}>
+        <div className={`absolute bottom-0 left-0 right-0 ${captionPad}`}>
+          <p className={`font-stamp ${nameSize} uppercase tracking-[0.14em] text-paper`}>
             {story.subject}
           </p>
-          <p className={`font-serif italic ${dekSize} text-paper-dim mt-0.5 line-clamp-1`}>
+          <p
+            className={`font-serif italic ${dekSize} text-brass-bright leading-snug ${
+              size === "sm" ? "mt-0.5 line-clamp-1" : "mt-1.5 line-clamp-2"
+            }`}
+          >
             {story.dek}
           </p>
         </div>

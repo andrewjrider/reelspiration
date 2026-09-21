@@ -3,7 +3,7 @@
 // an entry here to light up a story's PortraitFrame with a real image
 // instead of the archival-plate fallback.
 export const PORTRAITS: Record<string, string> = {
-  "kobe-bryant": "/portraits/kobe-bryant.jpg",
+  "kobe-bryant": "/portraits/kobe-bryant-2.jpg",
   "muhammad-ali": "/portraits/muhammad-ali.jpg",
   "nelson-mandela": "/portraits/nelson-mandela.jpg",
   "marie-curie": "/portraits/marie-curie.jpg",

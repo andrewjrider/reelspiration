@@ -4,6 +4,7 @@ import type { StoryHeroMedia as StoryHeroMediaRecord } from "@/data/types";
 
 interface StoryHeroMediaProps {
   subject: string;
+  quote?: string;
   sourceId?: string;
   media?: StoryHeroMediaRecord;
   fallbackSrc: string;
@@ -11,6 +12,7 @@ interface StoryHeroMediaProps {
 
 export default function StoryHeroMedia({
   subject,
+  quote,
   sourceId,
   media,
   fallbackSrc,
@@ -64,10 +66,12 @@ export default function StoryHeroMedia({
         >
           <div className="absolute inset-5 border border-brass/35" aria-hidden="true" />
           <p className="relative font-stamp text-[11px] uppercase tracking-[0.18em] text-brass">
-            Reelspiration Original
+            {subject} — The Reelspiration
           </p>
           <div className="relative">
-            <p className="max-w-2xl font-serif text-3xl text-paper sm:text-5xl">{subject}</p>
+            <p className="max-w-2xl font-serif italic text-2xl text-paper sm:text-4xl leading-snug">
+              {quote ? `“${quote}”` : subject}
+            </p>
             <div className="mt-4 h-px w-16 bg-brass" aria-hidden="true" />
           </div>
           <p className="relative font-stamp text-[10px] uppercase tracking-[0.16em] text-paper-dim">
