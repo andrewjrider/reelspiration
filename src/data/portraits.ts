@@ -20,6 +20,9 @@ export const PORTRAITS: Record<string, string> = {
   "elon-musk": "/portraits/elon-musk.jpg",
   "malala-yousafzai": "/portraits/malala-yousafzai.jpg",
   "pel": "/portraits/pel.jpg",
+  "lionel-messi": "/portraits/lionel-messi.jpg",
+  "serena-williams": "/portraits/serena-williams.jpg",
+  "walt-disney": "/portraits/walt-disney.jpg",
 };
 
 export function portraitSrc(slug: string): string | undefined {
