@@ -14,6 +14,8 @@ import StoryCard from "@/components/StoryCard";
 import AtmosphericBand from "@/components/AtmosphericBand";
 import SourceVerification from "@/components/SourceVerification";
 import StoryHeroMedia from "@/components/StoryHeroMedia";
+import PortraitFrame from "@/components/PortraitFrame";
+import { portraitSrc } from "@/data/portraits";
 import ReelspirationShareCard from "@/components/ReelspirationShareCard";
 import StoryShareActions from "@/components/StoryShareActions";
 import NewsletterSignup from "@/components/NewsletterSignup";
@@ -82,6 +84,7 @@ export default async function StoryPage({
   const narrativeParagraphs = story.canonicalStory
     ? splitNarrativeForDisplay(story.canonicalStory)
     : [];
+  const portrait = portraitSrc(story.slug);
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -152,6 +155,14 @@ export default async function StoryPage({
           </p>
         </div>
       </AtmosphericBand>
+
+      {portrait && (
+        <div className="max-w-3xl mx-auto px-6">
+          <div className="max-w-[220px] -mt-16 sm:-mt-20 relative z-10">
+            <PortraitFrame story={story} imageSrc={portrait} size="sm" />
+          </div>
+        </div>
+      )}
 
       <StoryHeroMedia
         subject={story.subject}

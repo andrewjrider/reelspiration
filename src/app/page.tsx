@@ -9,6 +9,7 @@ import {
   getPublicStoriesByCollection,
 } from "@/data/stories";
 import { collections } from "@/data/collections";
+import { portraitSrc } from "@/data/portraits";
 import { StoryRecord } from "@/data/types";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import { pageMetadata } from "@/lib/seo";
@@ -73,7 +74,8 @@ const editorialGroupSpecs = [
 
 export default function Home() {
   const stories = getPublicPublishedStories();
-  const featured = stories[0];
+  const featured =
+    stories.find((s) => s.slug === "kobe-bryant") ?? stories[0];
   const totalRecords = stories.length;
   const usedSlugs = new Set(featured ? [featured.slug] : []);
   const editorialGroups = editorialGroupSpecs.map((group) => {
@@ -153,7 +155,11 @@ export default function Home() {
               className="group block relative"
             >
               <div className="relative">
-                <PortraitFrame story={featured} size="lg" />
+                <PortraitFrame
+                  story={featured}
+                  imageSrc={portraitSrc(featured.slug)}
+                  size="lg"
+                />
                 {/* brass bracket offset behind the frame for depth */}
                 <div className="absolute -bottom-3 -right-3 w-full h-full border border-brass -z-10" />
               </div>
